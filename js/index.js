@@ -17,7 +17,7 @@ footer.appendChild(copyright); // Using "DOM Manipulation", append the copyright
 console.log(copyright); // it works!!!
 
 // Code for Lesson 4.2 (Create List of Skills)
-const skills = ['JavaScript', 'HTML', 'CSS']; // List your technical skills by creating an Array of String values and store it in a variable named skills
+const skills = ['JavaScript Functions', 'Loops', 'Arrays', 'Objects','DOM Manipulation)', 'HTML', 'HTML Forms', 'Git', 'GitHub', 'How the Internet Works', 'Command Line']; // List your technical skills by creating an Array of String values and store it in a variable named skills
 const skillsSection= document.getElementById('skills'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 
 const skillsList= skillsSection.querySelector('ul'); // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
