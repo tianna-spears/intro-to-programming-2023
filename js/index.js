@@ -28,3 +28,71 @@ for (let i = 0; i < skills.length; i++) { // Create a for loop to iterate over y
   skillsList.appendChild(skill); // On the next line, append the skill element to the skillsList element
 }
 
+// Homework 4-3 (Handle Message Form Submit and Display Messages in List)
+
+const messageForm= document.getElementById('leave_message'); 
+
+messageForm.addEventListener('submit', callBack);
+
+function callBack (event) {
+  event.preventDefault();
+
+  const usersName= document.getElementById('usersName').value;
+  const usersEmail= document.getElementById('usersEmail').value;
+  const usersMessage= document.getElementById('usersMessage').value;
+  
+  //if (event.target === usersName) {
+  //   return usersName;
+  // } else if (event.target === usersEmail) {
+  //   return usersEmail;
+  // } else if (event.target === usersMessage) 
+  //   return usersMessage;
+
+  // do I need the above IF statement if I am only logging the value in the console below?
+
+    console.log('Name:', usersName);
+    console.log('Email:', usersEmail);
+    console.log('Message:', usersMessage);
+
+    const messageSection= document.getElementById('messages');
+    const messageList= messageSection.querySelector('ul');
+    
+    const newMessage= document.createElement('li');
+    newMessage.innerHTML= '<a href=" mailto: ' + usersEmail + '" > ' 
+    + usersName + '</a>' + '<span> ' + usersMessage + ' </span>';
+
+    const removeButton= document.createElement('button');
+    removeButton.innerText=  ' remove';
+    removeButton.type= ' button';
+
+  
+    removeButton.addEventListener('click', function () {
+      const entry= removeButton.parentNode;
+      entry.remove();
+
+    });
+
+      newMessage.appendChild(removeButton);
+      messageList.appendChild(newMessage);
+  
+      document.getElementById('leave_message').reset();
+  }
+      
+  // // Stretch Goal- Hide the #messages section when the list is empty
+  // Stuck. Commenting to come back later
+    // function hide() {
+    //   if (usersMessage.length === 0) {
+    //     messagesElement.style.display= 'none';
+    //   } else {
+    //     messagesElement.style.display= 'block';
+    //   }
+    // }
+
+
+  // // Stretch Goal- Create an "edit" button for each message entry that allows user 
+  //to input a new/modified message
+
+  // Stuck. Commenting to come back later
+    // editButton.addEventListener('click', function () {
+    //   const editText= editButton.childNode;
+    // editButton.appendChild(newMessage);
