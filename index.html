@@ -5,133 +5,114 @@
     <meta charset="UTF-8">
     <meta name="first website design" content="My First Website">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title> Tianna's Portfolio Website! </title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
+    <title> Portfolio, Tianna Spears </title>
 </head>
 
-<nav class="topnav">
-    <a href="#about_me">About Me</a>
+<header class="header">
+    <p><img class= "profile_photo "src="./images/tss.jpeg" alt="Tianna on the beach">Tianna Spears, Software Engineer</p>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#prior_experience">Prior Experience</a>
     <a href="#connect">Connect</a>
-</nav>
-<br>
+</header>
 
+<main>
 <body>
-<section id="about_me">
+<div class= "about" id="about">
 <h1> About</h1>
-    <p>Hello world! My name is Tianna.
-    <br> 
-    I'm an aspiring software developer from North Carolina who is super excited 
-    to transition into the tech space. 
+    <p>
+    Highly motivated software engineering student seeking to apply practical skills in software development and contribute to innovative projects.
     <br> </p>
-    <img src="./images/tss.jpeg" alt="Tianna on the beach" height="425" width="350"> 
 
-    I'm a student in Code The Dream's 16-week <em>Introduction to Programming</em>
-    class. This intensive class builds a strong foundation for those wishing to become software developers. 
-    Additionally, I'm taking a Front-End Development Career Path at Codecademy. 
- </section>       
-    <!-- <h3> I'm learning the following topics: </h3>
-            <ul>
-                <li>Debugging</li>
-                <li>AJAX Basics</li>
-                <li>API fetch</li>
-            </ul>
-            </p> -->
+    <p>Programming Student <br> at <a href="https://codethedream.org/">Code The Dream</a></p>
+</div>   
 
-</section>
-
-<section id="skills">
-    <h2> Skills </h2>
+<div class="experience" id="experience">
+    <h1> Experience </h1>
     <ul>
-    </ul>
 
-</section>
-<br>
-
-<section id="education">
-    <h2> Education </h2>
-    <ul>
-        <li><strong>Introduction to Programming</strong>, Code The Dream (Sep. 2023- Expected Jan. 2024 )</li>
-        <li><strong>Front-End Engineer Career Path</strong>, Codecademy (Jul. 2023- Expected Dec. 2023) </li>
-        <li><strong>Learn JavaScript</strong>, Codecademy Certificate of Completion (Oct. 2023, 20 hours) </li>
-    </ul>
-
-    </section>
-    <br>
-
-    <section id="prior_experience">
-        <h1>Prior Experience </h1>
-        <p>
-        <ul>
-            <div>
-                <li><strong>Consular Operations Officer</strong> at U.S. Department of State </li>
-                -- Ciudad Juarez and Mexico City, Mexico; Mar 2018 - Dec 2019
-            </div>
-            <br>
-            <div>
-                <li><strong>Operations Manager</strong> at Integrity Construction & Renovation </li>
-                -- Durham, NC; May 2014 - Mar 2018
-            </div>
-            <br>
-            <div>
-                <li> <strong>Operations & HR Assistant</strong> at Integrity Construction & Renovation</li>
-                -- Durham, NC; Feb 2012 - May 2014
-            </div>
-            <br>
-            <div>
-                <li> <strong>Operations Associate </strong> at Crowder Construction</li>
-                -- Durham, NC; Jan 2011 - Jan 2012
-            </div>
-            </p>
+    <button>
+    <ul> 
+        <li> Programming Bootcamp at Code The Dream<br> 
+            <em>September 2023 to January 2024 </em> </li>
         </ul>
+    </button>
 
-        <section id="connect">
-            <h2>Connect</h2>
-            <p>
-                <li> <a href="mailto:tianna.spears7@gmail.com>"> Send me an email!</a> </li>
-                <li> <a href="https://github.com/tspizzlee" target="_blank">GitHub</a> </li>
-                <li> <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a> </li>   
-            </p>  
-        </section>
+    <button>
+    <ul> 
+        <li>Front-End Engineer Career Path at Codecademy  <br>
+        <em>July to December 2023</em> </li>
+        </ul>
+        </button>
 
-            <img src="images/doggo.jpeg" alt="my two dogs playing on the beach" height="400" width="350" />
+    <button>
+    <ul>
+        <li> Learn JavaScript, Codecademy Certificate<br>
+            <em>October 2023, 25 hours</em> </li> <br>
+    </ul>
+</div>
 
-<section>  
-<form id="leave_message">
-<h2>Leave a Message</h2>
-<br>
-</section> 
+<div class="projects" id="projects">
+    <h1> Projects </h1>
+        <img id="img_one" src="./images/codecademy_project.png">
+        <a id="one" href="https://github.com/tianna-spears/form_a_story_codecademy" target="_blank"> Form-A-Story-Codecademy </a>
+        
+        <img id="img_two" src="./images/CTD.png">
+        <a id="two" href="https://github.com/tianna-spears/intro-to-programming-2023" target="_blank"><br><br> Intro-To-Programming-Ganymede </a> 
+        
+        <a id="three" href="https://github.com/tianna-spears?tab=repositories" target="_blank"><br><br> GitHub Repositories </a> 
+        <br><br><img id="img_three" src="./images/GitHub_Logo.png">
 
-<section>
+       
+</div>
+
+
+<div class="skills" id="skills">
+    <h1> Skills </h1>
+    <ul>
+    </ul>
+</div>
+
+<section class="leave_message "form id="leave_message">
+<h1>Leave a Message</h1>
+<br> 
 <label for="usersName">User's Name:</label>
     <input type="text" id="usersName" required>
-</section>
-
-<section>
+    <br> <br>
 <label for="usersEmail">User's Email:</label>
     <input type="email" id="usersEmail" required>
-    <br>
-</section>
-
-<section>
+    <br> <br>
 <label for="usersMessage">Message:</label>
 <textarea id="usersMessage"> </textarea>
-    <br>
-    <input type="submit" value="Submit"> 
-    <br>
-</section>
+    <br> <br>
+<input class="submit_button" type="submit" value="Submit"> 
+    <br> <br>
 </form>
-
-
-<section id="messages">
-    <h2>Messages</h2>
-    <ul></ul>
 </section>
 
-<footer>    </footer>
-<script src="js/index.js"></script>
+<section class="messages" id="messages">
+    <br>
+    <h1>Messages</h1>
+    <ul></ul>
+</section> 
+</main>
+</body> 
 
-</body>
+<footer>    
+<div class="connect" id="connect">
+    <h3>Connect With Me Here -->
+        <button> <a href="mailto:tianna.spears7@gmail.com>"> Send me an email!</a> </buttton>
+        <button> <a href="https://github.com/tianna-spears" target="_blank">GitHub</a> </button>
+        <button> <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a> </button>   
+        </h3> 
+</div>
+
+<script src="js/index.js"></script>
+</footer>
+
 </html>

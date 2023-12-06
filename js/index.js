@@ -17,13 +17,13 @@ footer.appendChild(copyright); // Using "DOM Manipulation", append the copyright
 console.log(copyright); // it works!!!
 
 // Code for Lesson 4.2 (Create List of Skills)
-const skills = ['JavaScript Functions', 'Loops', 'Arrays', 'Objects','DOM Manipulation', 'HTML', 'HTML Forms', 'Git', 'GitHub', 'How the Internet Works', 'Command Line']; // List your technical skills by creating an Array of String values and store it in a variable named skills
+const skills = ['HTML','JavaScript', 'CSS', 'Git', 'GitHub']; // List your technical skills by creating an Array of String values and store it in a variable named skills
 const skillsSection= document.getElementById('skills'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 
 const skillsList= skillsSection.querySelector('ul'); // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
 
 for (let i = 0; i < skills.length; i++) { // Create a for loop to iterate over your skills Array, starting at index 0
-  let skill = document.createElement('li');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
+  let skill = document.createElement('button');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
   skill.innerText = skills[i]; // On the next line, set the inner text of your skill variable to the value of the current Array element
   skillsList.appendChild(skill); // On the next line, append the skill element to the skillsList element
 }
@@ -96,3 +96,14 @@ function callBack (event) {
     // editButton.addEventListener('click', function () {
     //   const editText= editButton.childNode;
     // editButton.appendChild(newMessage);
+
+    // practice for infinite scrolling banner but in JS-- 
+  // const banners= ['PROJECTS', 'PROJECTS', 'PROJECTS', 'PROJECTS'];
+  // const getBanner= document.getElementById('projects');
+  // const runBanner= getBanner.querySelector('h1');
+
+  // for (let i=0; i< banners.length; i++) {
+  // let banner= document.createElement('p');
+  // banner.innerText= banners[i];
+  // runBanner.appendChild(banner);
+  // }
