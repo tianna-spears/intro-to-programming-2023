@@ -3,74 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="first website design" content="My First Website">
+    <meta name="first website design" content="Portfolio">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
-    <title> Portfolio, Tianna Spears </title>
+    <title> Portfolio, Tianna Spears</title>
 </head>
 
-<header class="header">
-    <p><img class= "profile_photo "src="./images/tss.jpeg" alt="Tianna on the beach">Tianna Spears, Software Engineer</p>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#connect">Connect</a>
+<header>  
+    <h1> Portfolio, Tianna Spears </h1>
 </header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
 <main>
 <body>
+
 <div class= "about" id="about">
 <h1> About</h1>
     <p>
     Highly motivated software engineering student seeking to apply practical skills in software development and contribute to innovative projects.
     <br> </p>
-
     <p>Programming Student <br> at <a href="https://codethedream.org/">Code The Dream</a></p>
 </div>   
 
 <div class="experience" id="experience">
-    <h1> Experience </h1>
-    <ul>
+<h1> Experience </h1>
+    <p> Programming Bootcamp at Code The Dream<br> 
+        <em>September 2023 to January 2024 </em> </p>
+    
+    <p> Front-End Engineer Career Path at Codecademy<br>
+        <em>July to December 2023</em> </p>
 
-    <button>
-    <ul> 
-        <li> Programming Bootcamp at Code The Dream<br> 
-            <em>September 2023 to January 2024 </em> </li>
-        </ul>
-    </button>
-
-    <button>
-    <ul> 
-        <li>Front-End Engineer Career Path at Codecademy  <br>
-        <em>July to December 2023</em> </li>
-        </ul>
-        </button>
-
-    <button>
-    <ul>
-        <li> Learn JavaScript, Codecademy Certificate<br>
-            <em>October 2023, 25 hours</em> </li> <br>
-    </ul>
+    <p>Learn JavaScript, Codecademy Certificate<br>
+        <em>October 2023, 25 hours</em> </p> <br>
 </div>
 
 <div class="projects" id="projects">
     <h1> Projects </h1>
-        <img id="img_one" src="./images/codecademy_project.png">
-        <a id="one" href="https://github.com/tianna-spears/form_a_story_codecademy" target="_blank"> Form-A-Story-Codecademy </a>
+        <img id="project_one" src="./images/codecademy_project.png">
+        <a id="project_one" href="https://github.com/tianna-spears/form_a_story_codecademy" target="_blank"> Form-A-Story-Codecademy </a>
         
-        <img id="img_two" src="./images/CTD.png">
-        <a id="two" href="https://github.com/tianna-spears/intro-to-programming-2023" target="_blank"><br><br> Intro-To-Programming-Ganymede </a> 
+        <img id="project_two" src="./images/CTD.png">
+        <a id="project_two" href="https://github.com/tianna-spears/intro-to-programming-2023" target="_blank"><br><br> Intro-To-Programming-Ganymede </a> 
         
-        <a id="three" href="https://github.com/tianna-spears?tab=repositories" target="_blank"><br><br> GitHub Repositories </a> 
-        <br><br><img id="img_three" src="./images/GitHub_Logo.png">
-
-       
+        <a id="project_three" href="https://github.com/tianna-spears?tab=repositories" target="_blank"><br><br> GitHub Repositories </a> 
+        <br><br><img id="project_three" src="./images/GitHub_Logo.png"> 
 </div>
-
 
 <div class="skills" id="skills">
     <h1> Skills </h1>
@@ -78,40 +67,46 @@
     </ul>
 </div>
 
-<section class="leave_message "form id="leave_message">
-<h1>Leave a Message</h1>
-<br> 
+<section class="contact_me" form id="contact_me">
+    <h1>Leave a Message</h1>
+    <br> 
+
 <label for="usersName">User's Name:</label>
     <input type="text" id="usersName" required>
     <br> <br>
+
 <label for="usersEmail">User's Email:</label>
     <input type="email" id="usersEmail" required>
     <br> <br>
+
 <label for="usersMessage">Message:</label>
-<textarea id="usersMessage"> </textarea>
+    <textarea id="usersMessage"> </textarea>
     <br> <br>
+
 <input class="submit_button" type="submit" value="Submit"> 
     <br> <br>
-</form>
+
+    </form>
 </section>
 
-<section class="messages" id="messages">
-    <br>
+<section class="message_display" id="message_display">
+    <br> 
     <h1>Messages</h1>
-    <ul></ul>
+            <ul></ul>
 </section> 
+
 </main>
 </body> 
 
-<footer>    
-<div class="connect" id="connect">
-    <h3>Connect With Me Here -->
-        <button> <a href="mailto:tianna.spears7@gmail.com>"> Send me an email!</a> </buttton>
+<div class="social_media" id="social_media">
+    <h3>Social Media Display Goes Here </h3>
+        <button> <a href="mailto:tianna.spears7@gmail.com>" target="_blank"> Send me an email!</a> </buttton>
         <button> <a href="https://github.com/tianna-spears" target="_blank">GitHub</a> </button>
         <button> <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a> </button>   
-        </h3> 
+    </h3> 
 </div>
 
+<footer>  
 <script src="js/index.js"></script>
 </footer>
 
