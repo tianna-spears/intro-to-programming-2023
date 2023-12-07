@@ -25,15 +25,35 @@ header {
     text-align: center; 
 }
 
-nav {
- text-align: center;
- font-size: 20px;
+ul{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ overflow: hidden;
+ background-color: #7493C7;
+}
+
+li{
+    float: left;
+    border-right: 2px solid;
+}
+
+li:last-child{
+    border-right:none;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: underline;
 }
 
 nav a:hover{
-    color: #5785D8;
-    font-size: 24px;
-    text-decoration: underline;
+    color: whitesmoke;
+    background-color: dodgerblue;
+    font-size: 20px;
 }
 
 body {
