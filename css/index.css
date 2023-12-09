@@ -1,31 +1,26 @@
 * {
-    box-sizing: border-box;
+    
     font-family: "Hedvig Letters Sans", Helvetica, sans-serif;
 }
 
+body {
+    font-size: 18px;
+    background-color: aliceblue;
+    margin: 25px;
+}
+/*old colors*
 /* lavender blush
 darkslateblue */
 
-/* .profile_photo {
-    border-radius: 100%;
-    height: 75px;
-    width: 90px;
-}  */
-
-/* .card{
-    <img class= "profile_photo "src="./images/tss.jpeg" alt="Tianna on the beach">Tianna Spears, Software Engineer</p> -->
-} */
-
 header {
     color: white;
-    background-color: #5073AB;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 25px 25px;
+    background-color: #5785D8;
+    font-size: 15px;
+    padding: 10px;
     text-align: center; 
 }
 
-ul{
+nav ul{
  list-style-type: none;
  margin: 0;
  padding: 0;
@@ -33,16 +28,16 @@ ul{
  background-color: #7493C7;
 }
 
-li{
+nav li{
     float: left;
     border-right: 2px solid;
 }
 
-li:last-child{
+nav li:last-child{
     border-right:none;
 }
 
-li a{
+nav li a{
     display: block;
     color: white;
     text-align: center;
@@ -56,14 +51,75 @@ nav a:hover{
     font-size: 20px;
 }
 
-body {
-    font-size: 18px;
-    background-color: aliceblue;
+.photo_card{
     margin: 25px;
+    max-width: 500px;
+    max-height: 350px;
+    padding: 20px;
+    background-color: lightgray;
+    box-shadow: 10px 10px #5785D8;
+    border: 3px solid black;
 }
 
-.about {
+.photo_card img{
     float: left;
+    border: 2px solid black;
+}
+
+.photo_card h2{
+    color: black;
+    background-color: whitesmoke;
+    font-size: 24px;
+    margin: 50px;
+    padding: 20px;
+    text-align: center;
+    border: 5px solid #5785D8;
+}
+
+.photo_card button{
+    text-align: center;
+    color: white;
+    display: inline-block;
+    background-color: #5785D8;
+    font-size: 18px;
+    padding: 15px;
+    margin: 20px;
+}
+
+.photo_card button:hover{
+    background-color: #5785D8;
+    color: whitesmoke;
+    font-size: 24px;
+}
+
+.first_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+.first_container div {
+    background-color: whitesmoke;
+    margin: 10px;
+    clear: both;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+.second_container {
+    display: flex;
+    background-image: url("../images/minimal.jpeg");
+    flex-direction: column;
+  }
+
+.flex_container div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    clear: both;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+.about {
     text-align: center;
     width: 300px;
     height: 350px;
@@ -86,9 +142,6 @@ body {
 
 .experience p {
     margin: 5px;
-    font-size: 15px;
-    height: 75px;
-    width: 400px;
     text-align: center;
     padding: 10px;
     background-color: darkcyan;
@@ -105,11 +158,8 @@ body {
 .projects{
     clear: both;
     text-align: center;
-    width: 650px;
-    height: 350px;
     border: 2px solid black;
     padding: 20px;
-    margin: auto; 
     background-image: url("../images/minimal.jpeg");
 }
 
@@ -117,30 +167,24 @@ body {
   #project_two,
   #project_three {
     text-align: center;
-    margin: 0px;
     padding: 0px;
   }
 
-  #project_two{
-    float: right;
-    height: 175px;
-    width: 175px;
+  #project_one {
     border: 4px solid black;
   }
 
+  #project_two{
+border: 4px solid black;
+  }
+
   #project_three{
-    height: 100px;
-    width: 175px;
     border: 4px solid black;
   }
 
 .skills{
-text-align: center;
-width: 650px;
-height: 250px;
 border: 2px solid black;
 padding: 20px;
-margin: auto; 
 background-image: url("../images/minimal.jpeg");
 }
 
@@ -163,10 +207,7 @@ background-image: url("../images/minimal.jpeg");
     background-image: url("../images/minimal.jpeg");
     border: 2px dotted black;
     text-align: center;
-    margin: auto;
     padding: 20px;
-    width: 650px;
-    height: 375px;
 }
 
 .submit_button{
@@ -186,7 +227,6 @@ background-image: url("../images/minimal.jpeg");
 
 .social_media h3{
     background-image: url("../images/minimal.jpeg");
-    font-size: 25px;
     border: 3px solid black;
     padding: 15px;
     text-align: center; 
@@ -217,9 +257,3 @@ footer{
     margin: 20px;
 }
 
-#img_one {
-    float: left;
-    height: 200px;
-    width: 175px;
-    border: 4px solid black;
-  }
