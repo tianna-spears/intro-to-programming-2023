@@ -61,39 +61,68 @@ function callBack (event) {
 
     const removeButton= document.createElement('button');
     removeButton.innerText=  ' remove';
-    removeButton.type= ' button';
+    removeButton.type= 'button';
 
   
     removeButton.addEventListener("click", function () {
       const entry= removeButton.parentNode;
       entry.remove();
-
+      hide();
     });
 
       newMessage.appendChild(removeButton);
       messageList.appendChild(newMessage);
   
       document.getElementById('contact_me').reset();
+      hide();
   }
       
-// Stretch Goal- Hide the #messages section when the list is empty
-//   Stuck. Commenting to come back later
-//     function hide() {
-//       if (usersMessage.length === 0) {
-//         messagesElement.style.display= 'none';
-//       } else {
-//         messagesElement.style.display= 'block';
-//       }
-//     }
+// Stretch Goal- Hide #messages section when list is empty
+
+    function hide() {
+      const messagesElement= document.getElementById('message_display');
+      const messageList= messagesElement.querySelector('ul');
+      const hideButton= document.getElementbyId('hidebutton');
+      if (messageList.children.length === 0) {
+        messagesElement.style.display= 'none';
+        hideButton.disabled= true;
+      } else {
+        messagesElement.style.display= 'block';
+        hideButton.disabled= false;
+      }
+    }
+
+    const hideButton= document.createElement('button');
+    hideButton.id= 'hideButton';
+    hideButton.innerText=  ' Hide';
+
+    hideButton.addEventListener("click", function () {
+      const messagesElement= document.getElementById('message_display');
+      messagesElement.style.display='none';
+      hideButton.disabled= true;
+    });
+
+    const newMessage= document.createElement('div');
+    const messageList= document.getElementById('message_display');
+
+    newMessage.appendChild(hideButton);
+    messageList.appendChild(newMessage);
+
+  hide();
 
 
-//   // Stretch Goal- Create an "edit" button for each message entry that allows user 
+
 //   to input a new/modified message
 
 //   Stuck. Commenting to come back later
 //     editButton.addEventListener('click', function () {
 //       const editText= editButton.childNode;
 //     editButton.appendChild(newMessage);
+
+
+
+
+
 
 //     practice for infinite scrolling banner but in JS-- 
 //   const banners= ['PROJECTS', 'PROJECTS', 'PROJECTS', 'PROJECTS'];
