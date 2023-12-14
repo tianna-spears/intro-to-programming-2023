@@ -12,12 +12,12 @@ header {
     background-color: #5785D8;
     font-size: 15px;
     padding: 15px;
-    text-align: center; 
+    text-align: left; 
 }
 
 nav ul{
  list-style-type: none;
- margin: 0;
+ margin: 0px;
  padding: 10px;
  overflow: hidden;
  background-color: #7493C7;
@@ -28,14 +28,9 @@ nav li{
     border-right: 2px solid;
 }
 
-nav li:last-child{
-    border-right:none;
-}
-
 nav li a{
     display: block;
     color: white;
-    text-align: center;
     padding: 14px 16px;
     text-decoration: underline;
 }
@@ -46,116 +41,70 @@ nav a:hover{
     font-size: 20px;
 }
 
-.photo_card{
-    margin: 25px;
-    max-width: 550px;
-    max-height: 350px;
+.portfolio_container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    justify-content: center;
+
+    /* grid-auto-rows: minmax(100px,auto); */
+}
+
+.about{
+    margin: 20px;
     background-color: lightgray;
-    box-shadow: 20px 20px #5785D8;
-    border: 3px solid black;
+    grid-area: 1 / 1 / 2 / span 2;
+    /* border: 3px solid black; */
+    padding: 10px;
+    /* box-shadow: 20px 20px #5785D8; */
 }
 
-.photo_card img{
-    float: left;
-    border: 2px solid black;
+.about img{
+    float: right;
+    /* border: 2px solid black; */
 }
 
-.photo_card h2{
+.about h2{
     color: black;
     background-color: whitesmoke;
-    font-size: 20px;
-    margin: 15px;
+    font-size: 24px;
     padding: 20px;
-    text-align: center;
+    width: 50%;
+    height: 20%;
     border: 2px solid #5785D8;
 }
 
-.photo_card button{
+.about button{
     text-align: center;
     color: white;
     display: inline-block;
     background-color: #5785D8;
-    margin: 5px;
 }
 
-.photo_card button:hover{  
+.about button:hover{  
     font-size: 22px;
     opacity: 0.8;
 }
 
-.photo_card a{
+.about a{
     text-align: center;
     color: white;
     display: inline-block;
     background-color: #5785D8;
     font-size: 18px;
     padding: 15px;
-    margin: 5px;
-}
-
-.first_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;  
-  }
-
-.first_container div, 
-.second_container div {
-    background-color: whitesmoke;
-    margin: 25px;
-    padding: 25px;
-  }
-
-.second_container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-  } 
-
-  .third_container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .fourth_container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-  }
-
-.about {
-    height: 100%;
-    border: 2px solid black;
-    padding: 10px;
-    margin: 10px; 
-    background-color: lightgray;
-    box-shadow: 20px 20px #5785D8;
-    border: 3px solid black;
 }
 
 .experience{
-    background-color: #5785D8;
-    box-shadow: 20px 20px #5785D8;
+    /* background-color: #5785D8; */
+    /* box-shadow: 20px 20px #5785D8; */
     border: 3px solid black;
-    /* height: 25%; */
-    /* width: 100%; */
-    /* width: calc(100% - 50px); */
+    /* grid-area: 1 / 1 / 2 / span 1; */
+
 }
 
 .experience p {
-    /* width: 50%; */
     padding: 10px;
-    margin: 10px;
     border: 3px solid #5785D8;
     background-color: white;
     color: black;
@@ -163,51 +112,33 @@ nav a:hover{
 
 .skills{
     background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8;
+    /* box-shadow: 20px 20px #5785D8; */
     border: 3px solid black;
     padding: 15px;
-    text-align: center;
+    /* display: grid; */
+ 
     }
 
 .skills button{
-        margin: 5px;
-        text-align: center;
-        display: inline-block;
+        display: grid;
+        margin: 10px;
         padding: 15px;
         background-color: #5785D8;
         color: white;
 }
 
 .projects{
-    text-align: center;
     background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8;
+    /* box-shadow: 20px 20px #5785D8; */
     border: 3px solid black;
     padding: 20px;
 }
 
-#project_one,
-#project_two,
-#project_three {
-    float: left;
-
-    padding: 20px;
-    display: flex;
-    text-align: center;
-}
-
-.link_list a{
-    justify-content: center;
-}
-
-.contact_me{
-    clear: both;
+.contact{
     background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8;
+    /* box-shadow: 20px 20px #5785D8; */
     border: 3px solid black;
     padding: 25px;
-    margin: 50px;
-    height: 100%;
     text-align: center;
 }
 
@@ -219,14 +150,10 @@ nav a:hover{
 
 .message_display{
     background-color: whitesmoke;
-    height: 100%;
-    box-shadow: 20px 20px #5785D8;
+    /* box-shadow: 20px 20px #5785D8; */
     border: 3px solid black;
     padding: 15px;
     text-align: center;
-    margin: 50px;
-    /* width: 100%; */
-    /* margin: 50%; */
 }
 
 footer{
@@ -234,5 +161,4 @@ footer{
     font-size: 17px;
     text-align: right;
     color: darkslateblue;
-    margin: 20px;
 }
