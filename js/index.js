@@ -30,7 +30,7 @@ for (let i = 0; i < skills.length; i++) { // Create a for loop to iterate over y
 
 // Homework 4-3 (Handle Message Form Submit and Display Messages in List)
 
-const messageForm= document.getElementById('contact_me'); 
+const messageForm= document.getElementById('contact'); 
 
 messageForm.addEventListener("submit", callBack);
 
@@ -73,7 +73,7 @@ function callBack (event) {
       newMessage.appendChild(removeButton);
       messageList.appendChild(newMessage);
   
-      document.getElementById('contact_me').reset();
+      document.getElementById('contact').reset();
       hide();
   }
       
