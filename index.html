@@ -9,79 +9,122 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
-    <title> </title>
+    <title> Portfolio, Tianna Spears</title>
 </head>
+    
+<header> </header>
 
-<header>  
-<h3> </h3> 
-</header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-<nav>
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
 
-<main>
 <body>
 
-<div class="portfolio_container">
-    
-    <div class="about">
-            <img src="./images/tss.jpeg" alt="profile" style="width: 30%";>
-            <h2> Tianna Spears, Software Engineer</h2>
 
-    <section>
-        <!-- <a href="https://codethedream.org/"></a> -->
-        <p>Current programming student at Code The Dream.
-        Highly motivated software engineering student seeking to apply practical 
-        skills in software development and contribute to innovative projects.</p>
-    </section>
+<div class="grid_container">
 
-    <section>
-        <button><a href="https://github.com/tianna-spears" target="_blank">GitHub</a></button>
-        <button> <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a></button>   
-        <button><a href="mailto:tianna.spears7@gmail.com>" target="_blank"> Email</a></button>
-    </section>
+
+    <div class="socials"> 
+
+        <div>
+            <img src="./images/cartoon photo.png" alt="profile" style="width: 50%"> 
+        </div>
+        
+        <div class="image_text">
+            <h2> Hello! <br> I'm Tianna Spears. <h2>
+            <p> Software Developer </p>
+        </div>
+        
+        <div class="button_text"> 
+            <p>Let's connect! 
+                <br>
+                &#8595;
+            </p>
+        </div>
+
+        <div class="flex">
+            <button><a href="https://github.com/tianna-spears" target="_blank">GitHub</a></button>
+            <button><a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a></button>   
+            <button><a href="mailto:tianna.spears7@gmail.com>" target="_blank"> Email</a></button>
+        </div>
+    </div>
+
+
+    <div class="about" id="about">
+        <h2> About </h2>
+
+        <ul>  
+            <li>Programming student at <a href="https://codethedream.org/" target="_blank">Code The Dream.</a></li>  
+            <li>Highly motivated software developer 
+                seeking to apply practical 
+                skills in software development 
+                and contribute to innovative projects.</li> 
+          </ul>
 
     </div>
 
+
     <div class="experience" id="experience">
-        <h1> Experience </h1>
+        <h2> Experience </h2>
             <p> Programming Bootcamp at Code The Dream 
-                <br>( Sep. 2023 - Jan. 2024 )</p>
+                <br>( Sep. 2023 - Current )</p>
+            <p> Full-Stack Engineer Career Path at Codecademy
+                <br>( Dec. 2023 - Current )</p>  
             <p> Front-End Engineer Career Path at Codecademy
                 <br>( Jul. - Dec. 2023 )</p>
             <p>Learn JavaScript, Codecademy Certificate
                 <br>( Oct. 2023 ) - 25 hours</p>
     </div>
 
+
+
+
     <div class="skills" id="skills">
-        <h1> Skills </h1>
+        <h2> Skills </h2>
             <ul>
             </ul>
     </div>
 
+
     <div class="projects" id="projects">
-        <h1> Projects </h1>
-        <img id="project_one" width="10%" src="./images/codecademy_project.png">     
-        <img id="project_two" width= "10%" src="./images/CTD.png">
-        <img id="project_three" width="10% "src="./images/GitHub_Logo.png"> 
+            <h2> Projects </h2>
+    
+        <div class="project_one">
+            <img src="./images/CTD.png" width= "25%" >
+            <br> <br>
+            <a href="https://github.com/tianna-spears/intro-to-programming-2023"target="_blank">Intro To Programming <br> (Ganymede Class at Code The Dream) </a>
+        </div> 
 
-        <ul>
-            <li><a href="https://github.com/tianna-spears/form_a_story_codecademy"target="_blank">Form-A-Story-Codecademy </a></li>
-            <li><a href="https://github.com/tianna-spears/intro-to-programming-2023"target="_blank">Intro-To-Programming-Ganymede </a></li>
-            <li><a href="https://github.com/tianna-spears?tab=repositories"target="_blank">GitHub Repositories </a> </li>
-        </ul>
-    </div>
 
-    <form class="contact" id="contact">
-        <h1>Leave a Message</h1>
-        <br> 
+        <div class="project_two">
+            <img src="./images/codecademy_project.png" width="25%" > 
+            <br> <br>
+            <a href="https://github.com/tianna-spears/form_a_story_codecademy"target="_blank">Form A Story <br> (Full-Stack Engineer at Codecademy) </a>
+        </div>
+
+
+        <div class="project_three"> 
+            <img src="./images/GitHub_Logo.png" width="25%" >
+            <br> <br>
+            <a href="https://github.com/tianna-spears?tab=repositories" target="_blank">GitHub Repository <br> (Projects) </a>
+        </div>  
+
+</div> 
+
+
+
+<div class="contact_flexbox">
+
+    <div class="contact">
+            <h2>Leave a Message</h2>
+            <br> 
     
         <label for="usersName">User's Name:</label>
             <input type="text" id="usersName" required>
@@ -97,19 +140,25 @@
     
         <button class="submit_button"  type="submit">Submit</button> 
             <br> <br>
-    </form>
+    </div>
+
+</div>
+
+
 
     <div class="message_display" id="message_display">
-        <h1>Messages</h1> 
+        <h2>Messages</h2> 
             <ul></ul>
     </div> 
 
-</div>
-</main>
+</div> 
+
 </body> 
 
+
+
 <footer>  
-<script src="js/index.js"></script>
+    <script src="js/index.js"></script>
 </footer>
 
 </html>
