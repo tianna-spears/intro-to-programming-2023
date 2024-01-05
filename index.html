@@ -20,7 +20,7 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#leave_message">Contact</a></li>
         </ul>
     </nav>
 
@@ -96,8 +96,6 @@
     </div>
 
 
-
-
     <div class="skills" id="skills">
         <h2> Skills </h2>
             <ul>
@@ -105,11 +103,12 @@
     </div>
 
 
-    <div class="projects" id="projects">
+    <section class="projects" id="projects">
             <h2> Projects </h2>
-            <ul> </ul>
-    </div>
+                <ul></ul>
+    </section>
     
+
         <div class="project_one">
             <img src="./images/CTD.png" width= "25%" >
             <br> <br>
@@ -136,27 +135,28 @@
 
 <div class="contact_flexbox">
 
-    <div class="contact">
-            <h2>Leave a Message</h2>
-            <br> 
+    <section> 
+        <form class="leave_message" id="leave_message">
+            <h2>Leave a Message</h2>    <br> 
     
-        <label for="usersName">User's Name:</label>
-            <input type="text" id="usersName" required>
-            <br> <br>
+            <label for="usersName">User's Name:</label>
+                <input type="text" id="usersName" required>
+                <br> <br>
     
-        <label for="usersEmail">User's Email:</label>
-            <input type="email" id="usersEmail" required>
-            <br> <br>
+            <label for="usersEmail">User's Email:</label>
+                <input type="email" id="usersEmail" required>
+                <br> <br>
     
-        <label for="usersMessage">Message:</label>
-            <textarea id="usersMessage" required> </textarea>
-            <br> <br>
+            <label for="usersMessage">Message:</label>
+                <textarea id="usersMessage" required> </textarea>
+                <br> <br>
     
-        <button class="submit_button"  type="submit">Submit</button> 
-            <br> <br>
-    </div>
-
-</div>
+            <button class="submit_button"  type="submit">Submit</button> 
+                <br> <br> <br>
+                    <h3> Please keep in mind that all submitted messages
+                    will be dislayed publicly. </h3>
+        </form>
+    </section>
 
 
 
@@ -165,7 +165,9 @@
             <ul></ul>
     </div> 
 
+
 </div> 
+
 
 </body> 
 
