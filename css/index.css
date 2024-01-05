@@ -93,14 +93,14 @@ nav a:hover{
     text-decoration: underline;
 }
 
-.button_text p{
+.socials_text p{
     font-size: 30px;
     text-align: center;
     color: darkslateblue;
     font-weight: bold;
 }
 
-.flex button{
+.connect_button button{
     align-items: center;
     justify-content: center;
     width: auto;
@@ -111,13 +111,13 @@ nav a:hover{
     color: white;
 }
 
-.flex button a{
+.connect_button a{
     color: white;
     font-size: 25px;
     padding: 10px;
 }
 
-.flex button:hover{  
+.connect_button:hover{  
     font-size: 25px;
     opacity: 0.8;
     padding: 35px;
