@@ -286,10 +286,10 @@ nav a:hover{
 
 .contact_flexbox {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.contact {
+.leave_message {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -299,7 +299,7 @@ nav a:hover{
     padding: 25px;
 }
 
-.contact h2 {   
+.leave_message h2 {   
     display: flex;
     padding: 20px;
     border: 1px solid #5785D8;
@@ -309,11 +309,11 @@ nav a:hover{
     justify-content: center;
 } 
 
-.contact label{
+.leave_message label{
     font-size: 30px;
 }
 
-.contact input {
+.leave_message input {
     font-size: 30px;
 }
 
@@ -326,13 +326,15 @@ nav a:hover{
     margin: 25px;
     padding: 20px;
     font-size: 25px;
-    background-color:lightgreen;
+    background-color: mediumseagreen;
     justify-content: center;
     text-decoration: underline;
 }
 
 .submit_button:hover{
-    padding: 30px;
+    background-color: darkgreen;
+    text-transform: uppercase;
+    color: white;
 }
 
 
