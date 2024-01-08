@@ -17,6 +17,7 @@ footer.appendChild(copyright); // Using "DOM Manipulation", append the copyright
 console.log(copyright); // it works!!!
 
 // Code for Lesson 4.2 (Create List of Skills)
+
 const skills = ['HTML','JavaScript', 'CSS', 'Git', 'GitHub', 'Visual Studio Code', 'GitLab']; // List your technical skills by creating an Array of String values and store it in a variable named skills
 const skillsSection= document.getElementById('skills'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 
@@ -31,91 +32,92 @@ for (let i = 0; i < skills.length; i++) { // Create a for loop to iterate over y
 // Homework 4-3 (Handle Message Form Submit and Display Messages in List)
 
 const messageForm= document.getElementById('leave_message'); 
-
 messageForm.addEventListener("submit", callBack);
 
 function callBack (event) {
-
   const usersName= document.getElementById('usersName').value;
   const usersEmail= document.getElementById('usersEmail').value;
   const usersMessage= document.getElementById('usersMessage').value;
   
-  // if (event.target === usersName) {
-  //   return usersName;
-  // } else if (event.target === usersEmail) {
-  //   return usersEmail;
-  // } else if (event.target === usersMessage) 
-  //   return usersMessage;
-
     console.log('Name:', usersName);
     console.log('Email:', usersEmail);
     console.log('Message:', usersMessage);
 
     event.preventDefault();
 
-
-  // Display Messages in List - 4.3 HW Question //
+// Display Messages in List - 4.3 HW Question //
 
     const messageSection= document.getElementById('message_display');
     const messageList= messageSection.querySelector('ul');
     
     const newMessage= document.createElement('li');
+    
     newMessage.innerHTML= '<a href=" mailto: ' + usersEmail + '" > ' 
-    + usersName + '</a>' + ' wrote' + ' " ' + ' <span> ' + usersMessage +  ' " ' + ' </span> ';
+    + usersName + '</a>' + ' wrote' + ' " ' + ' <span> ' + usersMessage 
+    +  ' " ' + ' </span> ';
 
-  // Added Remove Button for Submitted Messages //
-    const removeButton= document.createElement('button');
-    removeButton.innerText=  ' remove';
-    removeButton.type= 'button';
+// Stretch Goal-- Add Edit Button for Submitted Messages
 
-    removeButton.addEventListener("click", function () {
-      const entry= removeButton.parentNode;
-      entry.remove();
-      hide();
-    });
+const editButton= document.createElement('button');
+editButton.id= 'editButton';
+editButton.innerText=  ' Edit ';
 
-      newMessage.appendChild(removeButton);
-      messageList.appendChild(newMessage);
-  
-      document.getElementById('leave_message').reset();
-      hide();
+editButton.addEventListener("click", function () {
+  const editedMessage= prompt("Edit your message here:", usersMessage)
+  if (editedMessage !== null) {
+    newMessage.querySelector('span').innerText= editedMessage;
+    hideMessageDisplay();
   }
+});
+
+newMessage.appendChild(editButton);
+
+// Stretch Goal-- Add Remove Button for Submitted Messages
+
+const removeButton= document.createElement('button');
+removeButton.innerText=  ' remove';
+removeButton.type= 'button';
+  
+removeButton.addEventListener("click", function () {
+const entry= removeButton.parentNode;
+entry.remove();
+hideMessageDisplay();
+});
+  
+newMessage.appendChild(removeButton);
+messageList.appendChild(newMessage);
+    
+document.getElementById('leave_message').reset();
+hideMessageDisplay();
+}
+
       
 // Stretch Goal- Hide #messages section when list is empty
 
     function hideMessageDisplay() {
-      const messageDisplay= document.getElementById('message_display');
-      
-      const messageList= messagesElement.querySelector('ul');
-      
-      const hideMessage= document.getElementbyId('message_display');
-
-      if (messageList === 0) {
-        messageDisplay.style.display= 'none';
-        hideMessage.disabled= true;
+      const messageSection= document.getElementById('message_display');
+      const messageList= messageSection.querySelector('ul');
+  
+      if (messageList.children.length === 0) {
+        messageSection.style.display= 'none';
       } else {
-        messageDisplay.style.display= 'block';
-        hideMessage.disabled= false;
+        messageSection.style.display= 'block';
       }
     }
 
-    const hideButton= document.createElement('button');
-    hideButton.id= 'hideButton';
-    hideButton.innerText=  ' Hide';
+    const messagesForm= document.getElementById('leave_message'); 
 
-    hideButton.addEventListener("click", function () {
-      const messagesElement= document.getElementById('message_display');
-      messagesElement.style.display='none';
-      hideButton.disabled= true;
+    messagesForm.addEventListener("submit", function (event) {
+      const editButton= document.getElementById('editButton');
+
+      hideMessageDisplay();
     });
 
-    const newMessage= document.createElement('div');
-    const messageList= document.getElementById('message_display');
+    const messageSection= document.getElementById('message_display');
+    messageSection.style.display= 'none';
+    const editButton= document.getElementById('editButton');
 
-    newMessage.appendChild(hideButton);
-    messageList.appendChild(newMessage);
-
-  hide();
+    hideMessageDisplay();
 
 
 
@@ -125,11 +127,6 @@ function callBack (event) {
 //     editButton.addEventListener('click', function () {
 //       const editText= editButton.childNode;
 //     editButton.appendChild(newMessage);
-
-
-
-
-
 
 //     practice for infinite scrolling banner but in JS-- 
 //   const banners= ['PROJECTS', 'PROJECTS', 'PROJECTS', 'PROJECTS'];

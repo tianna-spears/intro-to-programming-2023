@@ -341,6 +341,9 @@ nav a:hover{
 
 /* Message Display */
 
+/* #message_display {
+    display: none;
+} */
 
 .message_display{
     margin: 25px;
