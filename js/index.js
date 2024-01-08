@@ -119,6 +119,49 @@ hideMessageDisplay();
 
     hideMessageDisplay();
 
+// Homework Lesson 6-1
+
+// Fetch GitHub Repositories
+const githubRequest =new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/tianna-spears/repos');
+
+
+// Handle Response from Server
+githubRequest.onload = function () {
+  const repositories= JSON.parse(githubRequest.responseText);
+
+// Display Repositories in List
+
+const projectSection= document.getElementById('projects');
+const projectList= projectSection.querySelector('ul');
+
+
+for (let i= 0; i < repositories.length; i++) {
+  const project= document.createElement('li');
+  project.innerText= repositories[i].name;
+  projectList.appendChild(project);
+  }
+};
+
+
+githubRequest.send();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //   to input a new/modified message
