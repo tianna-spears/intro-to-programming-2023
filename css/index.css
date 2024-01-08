@@ -228,15 +228,15 @@ nav a:hover{
 /* Projects  */
 
 
-/* .projects {
+.projects {
     grid-area: projects;
-    align-content: center;
+    /* align-content: center; */
     display: inline-block;
     box-shadow: 20px 20px darkslateblue;
-    border: 5px solid white;
+    border: 10px darkslateblue;
     padding: 20px;
-    background-image: url('../images/background3.jpg');
-    background-size: fill;
+    /* background-image: url('../images/background3.jpg'); */
+    /* background-size: fill; */
     min-width: auto;
     max-height: auto;
 } 
@@ -273,7 +273,7 @@ nav a:hover{
 .project_three a {
     text-align: center;
     font-size: 30px;
-}  */
+} 
 
 
 /* Contact and Message Display Flex Container*/

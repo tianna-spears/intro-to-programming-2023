@@ -56,7 +56,7 @@ function callBack (event) {
     + usersName + '</a>' + ' wrote' + ' " ' + ' <span> ' + usersMessage 
     +  ' " ' + ' </span> ';
 
-// Stretch Goal-- Add Edit Button for Submitted Messages
+// 4.3 HW Question Stretch Goal-- Add Edit Button for Submitted Messages
 
 const editButton= document.createElement('button');
 editButton.id= 'editButton';
@@ -72,7 +72,7 @@ editButton.addEventListener("click", function () {
 
 newMessage.appendChild(editButton);
 
-// Stretch Goal-- Add Remove Button for Submitted Messages
+// 4.3 HW Question Stretch Goal-- Add Remove Button for Submitted Messages
 
 const removeButton= document.createElement('button');
 removeButton.innerText=  ' remove';
@@ -92,7 +92,7 @@ hideMessageDisplay();
 }
 
       
-// Stretch Goal- Hide #messages section when list is empty
+// 4.3 HW Question Stretch Goal-- Hide #messages section when list is empty
 
     function hideMessageDisplay() {
       const messageSection= document.getElementById('message_display');
@@ -125,7 +125,6 @@ hideMessageDisplay();
 const githubRequest =new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/tianna-spears/repos');
 
-
 // Handle Response from Server
 githubRequest.onload = function () {
   const repositories= JSON.parse(githubRequest.responseText);
@@ -135,14 +134,32 @@ githubRequest.onload = function () {
 const projectSection= document.getElementById('projects');
 const projectList= projectSection.querySelector('ul');
 
-
 for (let i= 0; i < repositories.length; i++) {
   const project= document.createElement('li');
-  project.innerText= repositories[i].name;
+
+  // Lesson 6-1 Stretch Goals-- Transform repository names into <a> tags that link to GitHub
+  // Display additional repository information
+  // Customize styling of Projects Section List-- look in CSS
+  const reposLinks= document.createElement('a');
+
+  reposLinks.href= repositories[i].html_url;
+  reposLinks.textContent= repositories[i].name;
+
+  const reposDescription= document.createElement('p');
+  reposDescription.textContent= repositories[i].description;
+
+  const createdAt = document.createElement('p');
+
+  const normalDate= new Date(repositories[i].created_at);
+  createdAt.textContent= 'Created on: ' + normalDate.toLocaleDateString();
+
+  project.appendChild(reposLinks);
+  project.appendChild(reposDescription);
+  project.appendChild(createdAt);
+
   projectList.appendChild(project);
   }
 };
-
 
 githubRequest.send();
 
