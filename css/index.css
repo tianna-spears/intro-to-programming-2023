@@ -8,7 +8,7 @@
 /* Body Styling*/
 
 body {
-    margin: 50px;
+    margin: 25px;
     /* min-width: auto;
     min-height: auto;
     max-width: 800px;
@@ -19,81 +19,52 @@ body {
 
 .grid_container {
     display: grid;
-    padding: 20px;
+    padding: 15px;
     grid-template-rows: repeat (7, 2fr);
-    grid-template-columns: repeat (2, 2fr);
-    gap: 25px 25px;
-    /* justify-items: center; */
+    grid-template-columns: repeat (2, 1fr);
     grid-template-areas:
-    'header header'
-    'sidebar about'
-    'experience skills'
-    'projects project_slides'
+    'nav nav'
+    'about about'
+    'skills_exp skills_exp'
+    'projects projects'
     'contact contact'
     'message_display message_display '
     'footer footer';
-
+    /* gap: 25px 25px; 
+    /* justify-items: center; */
     min-width: auto;
     max-height: auto;
 }
 
-/* Header// Top Navigation Bar */
+/* Header// Navigation Bar */
 
 nav {
-grid-area: header;
+grid-area: nav;
+
 }
 
 nav ul {
+    display: flex;
+    justify-content: flex-end;    
     list-style-type: none;
+    font-size: 25px;
     overflow: hidden;
-    font-size: 23px;
+    padding: 15px;
     background-color: darkslateblue;
 }
 
 nav li a{
-    float: left;
     color: white;
-    padding: 20px;
+    padding: 10px;
+    font-size: 25px;
     text-decoration: none;
 }
 
-nav a:hover{
-    color: black;
-    font-size: 25px;
+nav a:hover {
+    font-size: 27px;
+    opacity: 0.8;
     background-color: whitesmoke;
-    text-decoration: underline;
-    opacity: 0.8;
-}
-
-/* Sidebar (aside) */
-
-.sidebar {
-    grid-area: sidebar;
-}
-
-.sidebar button{
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    margin:  5px;
-    padding: 25px;
-    border-radius: 15px;
-    background-color: darkslateblue;
-    color: white;
-}
-
-.sidebar_button a{
-    color: white;
-    font-size: 25px;
-    padding: 10px;
-}
-
-.sidebar_button:hover{  
-    font-size: 25px;
-    opacity: 0.8;
-    padding: 35px;
-    align-items: center;
-    justify-content: center;
+    color: black;
 }
 
 
@@ -101,32 +72,44 @@ nav a:hover{
 
 .about {
     grid-area: about;
-    border: 3px solid #5785D8;
-    background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8;
+    /* background-color: whitesmoke;
+    box-shadow: 20px 20px #5785D8; */
     padding: 50px;
-    margin: 20px;
-    min-width: auto;
-    max-height: auto;
+    /* min-width: auto;
+    max-height: auto; */
+    border: 3px solid white;
+    background-color: darkslateblue;
 }
 
 .about img{
     border-radius: 50%;
     border: 5px dotted #5785D8;
     float: right;
-    padding: 10px;
-    margin: 20px;
+    padding: 50px;
+    margin: 10px;
 }
 
-.about h2{
-    font-size: 28px;
+.intro, .intro2{
+    grid-area: about;
+    font-size: 25px;
     padding: 20px;
-    border: 2px solid darkslateblue;
+    border: 3px solid white;
     text-align: center;
-    color: darkslateblue;
-} 
+    color: white;
+}
 
-.about p{
+.gitHub, .linkedIn, .email {
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 40px;
+}
+
+/* .gitHub, .linkedIn, .email:hover{  
+    font-size: 25px;
+    opacity: 0.8;
+}  */
+
+/* .about p{
     font-size: 30px;
     font-style: italic;
     text-decoration: underline;
@@ -134,42 +117,50 @@ nav a:hover{
     text-align: center;
     color: darkslateblue;
     font-weight: bold;
-}
-
-/* About
-
-
-.about {
-    grid-area: about;
-    padding: 20px;
-    background-color: whitesmoke;
-    border: 3px solid #5785D8;
-    box-shadow: 10px 10px #5785D8;
-    place-self: center;
-    align-items: center;
-    font-size: 28px;
-    min-width: auto;
-    max-height: auto;
-} 
-
-.about h2{
-    padding: 20px;
-    border: 1px solid #5785D8;
-    box-shadow: 5px 5px #5785D8;
-    text-align: center;
-} 
-
-.about li{
-    font-size: 28px;
 } */
 
 
 
 
-/* Experience */
 
-.experience {
-    grid-area: experience;
+/* Skills and Experience */
+
+.skills{
+    grid-area: skills_exp;
+    background-color: whitesmoke;
+    /* border: 3px solid #5785D8; */
+    padding: 15px;
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+    place-self: center;
+    /* min-width: auto;
+    max-height: auto; */
+    text-align: center;
+    /* box-shadow: 20px 20px #5785D8; */ 
+}
+
+/* .skills h2{
+    padding: 20px;
+    border: 1px solid #5785D8;
+    box-shadow: 5px 5px #5785D8;
+    text-align: center;
+} */
+
+.skills button{
+    margin: 5px;
+    padding: 20px;
+    font-size: 24px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    border-radius: 15px;
+    background-color: darkslateblue;
+    color: white;
+}
+
+/* .experience {
+    grid-area: skills_exp;
     border: 3px solid #5785D8;
     background-color: whitesmoke;
     box-shadow: 20px 20px #5785D8;
@@ -188,74 +179,39 @@ nav a:hover{
     margin: 15px;
     border: 1px solid darkslateblue;
     text-align: center;
-}
-
-
-
-/* Skills */
-
-.skills{
-    grid-area: skills;
-    background-color: whitesmoke;
-    box-shadow: 10px 10px #5785D8;
-    border: 3px solid #5785D8;
-    padding: 15px;
-    font-size: 28px;
-    align-items: center;
-    justify-content: center;
-    place-self: center;
-    min-width: auto;
-    max-height: auto;
-    text-align: center;
-
-}
-
-.skills h2{
-    padding: 20px;
-    border: 1px solid #5785D8;
-    box-shadow: 5px 5px #5785D8;
-    text-align: center;
-}
-
-/* what is this for?
-
-.skills button{
-    margin: 5px;
-    padding: 20px;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    border-radius: 15px;
-    background-color: darkslateblue;
-    color: white;
 } */
-
 
 
 /* Projects  */
 
-
 .projects {
     grid-area: projects;
-    /* align-content: center; */
-    display: inline-block;
-    box-shadow: 20px 20px darkslateblue;
-    border: 10px darkslateblue;
     padding: 20px;
-    /* background-image: url('../images/background3.jpg'); */
-    /* background-size: fill; */
+    /* border: 3px solid white; */
+    /* background-color: darkslateblue; */
+
+    background-image: url('../images/background3.jpg');
+    background-size: fill; 
 } 
 
- .projects h2{
-    font-size: 42px;
+.projects h2{
+    font-size: 25px;
+    padding: 20px;
+    border: 3px solid white;
+    background-color: white;
     text-align: center;
+    color: black;
+}
+
+ .projects ul{
+    font-size: 18px;
     padding: 25px;
     background-color: whitesmoke;
-    border: 10px solid darkslateblue;
 } 
 
-/* Project Slides */
+
+
+/* Project Slides
 
 .project_slides {
     grid-area: project_slides;
@@ -276,28 +232,26 @@ nav a:hover{
 .project_slides {
     text-align: center;
     font-size: 30px;
-} 
+}  */
 
 /* Contact */
 
 .contact {
     grid-area: contact;
-    flex-direction: column;
 }
 
 .leave_message {
     grid-area: message_display;
     text-align: center;
-    background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8;
+    background-color: darkslateblue;
     border: 6px solid black;
     padding: 25px;
+    color: white;
 }
 
 .leave_message h2 {   
     padding: 20px;
-    border: 1px solid #5785D8;
-    box-shadow: 5px 5px #5785D8;
+    border: 1px solid white;
     text-align: center;
     font-size: 40px;
     justify-content: center;
@@ -321,6 +275,8 @@ nav a:hover{
     padding: 20px;
     font-size: 25px;
     background-color: mediumseagreen;
+    align-items: center;
+    justify-self: center;
     justify-content: center;
     text-decoration: underline;
 }
@@ -329,6 +285,7 @@ nav a:hover{
     background-color: darkgreen;
     text-transform: uppercase;
     color: white;
+    align-items: center;
 }
 
 /* Message Display */
@@ -372,8 +329,8 @@ footer{
 } 
 
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     body {
       font-size: 14px;
     }
-}
+} */
