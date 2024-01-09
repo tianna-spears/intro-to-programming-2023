@@ -11,18 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
     <title> Portfolio, Tianna Spears</title>
 </head>
-    
-<header> </header>
-
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#leave_message">Contact</a></li>
-        </ul>
-    </nav>
 
 
 <body>
@@ -30,67 +18,59 @@
 
 <div class="grid_container">
 
+    <header>
+        <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#leave_message">Contact</a></li>
+        </ul>
+        </nav>
+    </header>
 
-    <div class="socials"> 
 
-        <div>
-            <img src="./images/cartoon photo.png" alt="profile" style="width: 50%"> 
-        </div>
+    <div class="about" id="about"> 
+        <img src="./images/cartoon photo.png" alt="profile" style="width: 50%"> 
+        <h2> Hello! <br> I'm Tianna Spears. I bring creative ideas to life. <h2>
+        <p> Software Developer </p>
+        <p> About </p>
+            <ul>  
+                <li>Programming student at <a href="https://codethedream.org/" target="_blank">Code The Dream.</a></li>  
+            </ul>
+    </div>
         
-        <div class="image_text">
-            <h2> Hello! <br> I'm Tianna Spears. <h2>
-            <p> Software Developer </p>
-        </div>
-        
-        <div class="socials_text"> 
-            <p>Let's connect! 
-                <br>
-                &#8595;
+    <aside class="sidebar" id="sidebar"> 
+        <p>Let's connect! 
+            <br>
+            &#8595;
             </p>
-        </div>
 
-            <div class="connect_button">
-            <button> 
-                <i class="fa-brands fa-github" width="500px" height="500px"></i>
-                <a href="https://github.com/tianna-spears" target="_blank">GitHub</a>
-            </button>
+        <button> 
+            <i class="fa-brands fa-github" width="500px" height="500px"></i>
+            <a href="https://github.com/tianna-spears" target="_blank">GitHub</a>
+        </button>
 
-            <button>
-                <i class="fa-brands fa-linkedin"></i>  
-                <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a>
-            </button> 
+        <button>
+            <i class="fa-brands fa-linkedin"></i>  
+            <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a>
+        </button> 
 
-            <button>
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:tianna.spears7@gmail.com>" target="_blank"> Email</a>
-            </button>
-        </div>
+        <button>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:tianna.spears7@gmail.com>" target="_blank"> Email</a>
+        </button>
+    </aside>
         
-    </div>
-
-
-    <div class="about" id="about">
-        <h2> About </h2>
-
-        <ul>  
-            <li>Programming student at <a href="https://codethedream.org/" target="_blank">Code The Dream.</a></li>  
-            <li>Highly motivated software developer 
-                seeking to apply practical 
-                skills in software development 
-                and contribute to innovative projects.</li> 
-          </ul>
-
-    </div>
 
 
     <div class="experience" id="experience">
         <h2> Experience </h2>
             <p> Programming Bootcamp at Code The Dream 
                 <br>( Sep. 2023 - Current )</p>
-            <p> Full-Stack Engineer Career Path at Codecademy
-                <br>( Dec. 2023 - Current )</p>  
             <p> Front-End Engineer Career Path at Codecademy
-                <br>( Jul. - Dec. 2023 )</p>
+                <br>( Jul. 2023 - Current )</p>
             <p>Learn JavaScript, Codecademy Certificate
                 <br>( Oct. 2023 ) - 25 hours</p>
     </div>
@@ -108,34 +88,24 @@
                 <ul></ul>
     </section>
     
-    <div>
-        <div class="project_one">
+
+    <div class="project_ slides">
             <img src="./images/CTD.png" width= "50%" >
             <br> <br>
             <a href="https://github.com/tianna-spears/intro-to-programming-2023"target="_blank">Intro To Programming <br> (Ganymede Class at Code The Dream) </a>
-        </div> 
 
-        <div class="project_two">
             <img src="./images/codecademy_project.png" width="50%" > 
             <br> <br>
             <a href="https://github.com/tianna-spears/form_a_story_codecademy"target="_blank">Form A Story <br> (Full-Stack Engineer at Codecademy) </a>
-        </div>
 
-
-        <div class="project_three"> 
             <img src="./images/GitHub_Logo.png" width="50%" >
             <br> <br>
             <a href="https://github.com/tianna-spears?tab=repositories" target="_blank">GitHub Repository <br> (Projects) </a>
-        </div> 
     </div> 
 
-</div> 
 
+    <div class="contact">
 
-
-<div class="contact_flexbox">
-
-    <section> 
         <form class="leave_message" id="leave_message">
             <h2>Leave a Message</h2>    <br> 
     
@@ -156,8 +126,7 @@
                     <h3> Please keep in mind that all submitted messages
                     will be dislayed publicly. </h3>
         </form>
-    </section>
-
+    </div>
 
 
     <div class="message_display" id="message_display">
@@ -165,17 +134,15 @@
             <ul></ul>
     </div> 
 
-
-</div> 
-
-
 </body> 
 
 
 
 <footer>  
-    <script src="js/index.js"></script>
+    <script src="js/index.js"> </script>
     <script src="https://kit.fontawesome.com/508c73f11a.js" crossorigin="anonymous"></script>
 </footer>
+
+</div> 
 
 </html>

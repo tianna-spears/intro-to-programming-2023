@@ -15,7 +15,33 @@ body {
     max-height: auto; */
 }
 
-/* Top Navigation Bar */
+/* Grid Container */
+
+.grid_container {
+    display: grid;
+    padding: 20px;
+    grid-template-rows: repeat (7, 2fr);
+    grid-template-columns: repeat (2, 2fr);
+    gap: 25px 25px;
+    /* justify-items: center; */
+    grid-template-areas:
+    'header header'
+    'sidebar about'
+    'experience skills'
+    'projects project_slides'
+    'contact contact'
+    'message_display message_display '
+    'footer footer';
+
+    min-width: auto;
+    max-height: auto;
+}
+
+/* Header// Top Navigation Bar */
+
+nav {
+grid-area: header;
+}
 
 nav ul {
     list-style-type: none;
@@ -39,68 +65,13 @@ nav a:hover{
     opacity: 0.8;
 }
 
+/* Sidebar (aside) */
 
-/* Grid Container */
-
-.grid_container {
-    display: grid;
-    padding: 20px;
-    grid-template-rows: repeat (3, 2fr);
-    grid-template-columns: repeat (3, 2fr);
-    gap: 50px 50px;
-    justify-items: center;
-    grid-template-areas:
-        'socials socials about'
-        'experience experience skills'
-        'projects projects projects';
-    min-width: auto;
-    max-height: auto;
+.sidebar {
+    grid-area: sidebar;
 }
 
-/* Socials */
-
-.socials {
-    grid-area: socials;
-    border: 3px solid #5785D8;
-    background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8;
-    padding: 50px;
-    margin: 20px;
-    min-width: auto;
-    max-height: auto;
-
-}
-
-.socials img{
-    border-radius: 50%;
-    border: 5px dotted #5785D8;
-    float: right;
-    padding: 10px;
-    margin: 20px;
-}
-
-.image_text{
-    font-size: 28px;
-    padding: 20px;
-    border: 2px solid darkslateblue;
-    text-align: center;
-    color: darkslateblue;
-} 
-
-.image_text p{
-    font-size: 28px;
-    font-style: italic;
-    text-decoration: underline;
-}
-
-.socials_text p{
-    font-size: 30px;
-    text-align: center;
-    color: darkslateblue;
-    font-weight: bold;
-}
-
-.connect_button button{
+.sidebar button{
     align-items: center;
     justify-content: center;
     width: auto;
@@ -111,13 +82,13 @@ nav a:hover{
     color: white;
 }
 
-.connect_button a{
+.sidebar_button a{
     color: white;
     font-size: 25px;
     padding: 10px;
 }
 
-.connect_button:hover{  
+.sidebar_button:hover{  
     font-size: 25px;
     opacity: 0.8;
     padding: 35px;
@@ -127,6 +98,45 @@ nav a:hover{
 
 
 /* About */
+
+.about {
+    grid-area: about;
+    border: 3px solid #5785D8;
+    background-color: whitesmoke;
+    box-shadow: 20px 20px #5785D8;
+    padding: 50px;
+    margin: 20px;
+    min-width: auto;
+    max-height: auto;
+}
+
+.about img{
+    border-radius: 50%;
+    border: 5px dotted #5785D8;
+    float: right;
+    padding: 10px;
+    margin: 20px;
+}
+
+.about h2{
+    font-size: 28px;
+    padding: 20px;
+    border: 2px solid darkslateblue;
+    text-align: center;
+    color: darkslateblue;
+} 
+
+.about p{
+    font-size: 30px;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 30px;
+    text-align: center;
+    color: darkslateblue;
+    font-weight: bold;
+}
+
+/* About
 
 
 .about {
@@ -151,22 +161,18 @@ nav a:hover{
 
 .about li{
     font-size: 28px;
-}
+} */
+
+
+
 
 /* Experience */
 
 .experience {
     grid-area: experience;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat (1, 3fr);
     border: 3px solid #5785D8;
     background-color: whitesmoke;
     box-shadow: 20px 20px #5785D8;
-    padding: 20px;
-    font-size: 28px;
-    min-width: auto;
-    max-height: auto;
 }
 
 .experience h2{
@@ -211,6 +217,8 @@ nav a:hover{
     text-align: center;
 }
 
+/* what is this for?
+
 .skills button{
     margin: 5px;
     padding: 20px;
@@ -221,7 +229,7 @@ nav a:hover{
     border-radius: 15px;
     background-color: darkslateblue;
     color: white;
-}
+} */
 
 
 
@@ -237,8 +245,6 @@ nav a:hover{
     padding: 20px;
     /* background-image: url('../images/background3.jpg'); */
     /* background-size: fill; */
-    min-width: auto;
-    max-height: auto;
 } 
 
  .projects h2{
@@ -249,9 +255,13 @@ nav a:hover{
     border: 10px solid darkslateblue;
 } 
 
-.project_one,
-.project_two,
-.project_three {
+/* Project Slides */
+
+.project_slides {
+    grid-area: project_slides;
+}
+
+.project_slides {
     background-color: whitesmoke;
     padding: 25px;
     margin: 10px;
@@ -260,38 +270,23 @@ nav a:hover{
     text-align: center;
     max-width: 300px;
     max-height: 600px; 
- }
-
-.project_one img,
-.project_two img,
-.project_three img {
     align-content: center;
 }
 
-.project_one a,
-.project_two a,
-.project_three a {
+.project_slides {
     text-align: center;
     font-size: 30px;
 } 
 
-
-/* Contact and Message Display Flex Container*/
-
-
-
-
-
 /* Contact */
 
-.contact_flexbox {
-    display: flex;
+.contact {
+    grid-area: contact;
     flex-direction: column;
 }
 
 .leave_message {
-    display: flex;
-    flex-direction: column;
+    grid-area: message_display;
     text-align: center;
     background-color: whitesmoke;
     box-shadow: 20px 20px #5785D8;
@@ -300,7 +295,6 @@ nav a:hover{
 }
 
 .leave_message h2 {   
-    display: flex;
     padding: 20px;
     border: 1px solid #5785D8;
     box-shadow: 5px 5px #5785D8;
@@ -337,15 +331,10 @@ nav a:hover{
     color: white;
 }
 
-
-
 /* Message Display */
 
-/* #message_display {
-    display: none;
-} */
-
 .message_display{
+    grid-area: message_display;  
     margin: 25px;
     background-color: whitesmoke;
     box-shadow: 10px 10px #5785D8;
@@ -374,6 +363,7 @@ nav a:hover{
 /* Footer */
 
 footer{
+    grid-area: footer;
     padding: 10px;
     font-size: 22px;
     text-align: left;
