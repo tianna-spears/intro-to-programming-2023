@@ -18,14 +18,23 @@ console.log(copyright); // it works!!!
 
 // Code for Lesson 4.2 (Create List of Skills)
 
-const skills = ['HTML','JavaScript', 'CSS', 'Git', 'GitHub', 'Visual Studio Code', 'GitLab']; // List your technical skills by creating an Array of String values and store it in a variable named skills
+// const skills = ['HTML','JavaScript', 'CSS', 'Git', 'GitHub', 'Visual Studio Code', 'GitLab']; // List your technical skills by creating an Array of String values and store it in a variable named skills
+const skillsLogos= ['images/html_logo.png', 'images/css_logo.png', "images/javascript_logo.png",
+'images/devtools_logo.png', 'images/git_logo.png', 'images/github_logo.png', 
+'images/gitlab_logo.png', 'images/npm_logo.png', 'images/vsc_logo.png'
+];
+
+/Users/tiannaspears/intro-to-programming-2023/images/css_logo.png
+
 const skillsSection= document.getElementById('skills'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 
 const skillsList= skillsSection.querySelector('ul'); // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
 
-for (let i = 0; i < skills.length; i++) { // Create a for loop to iterate over your skills Array, starting at index 0
-  let skill = document.createElement('button');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
-  skill.innerText = skills[i]; // On the next line, set the inner text of your skill variable to the value of the current Array element
+for (let i = 0; i < skillsLogos.length; i++) { // Create a for loop to iterate over your skills Array, starting at index 0
+  let skill = document.createElement('li');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
+  let skillImage= document.createElement('img');
+  skillImage.src= skillsLogos[i];
+  // skill.innerText = skills_logos[i]; // On the next line, set the inner text of your skill variable to the value of the current Array element
   skillsList.appendChild(skill); // On the next line, append the skill element to the skillsList element
 }
 
