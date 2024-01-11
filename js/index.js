@@ -3,7 +3,7 @@
 // Insert Copyright Text in Footer (Lesson 4.2)
 
 const today= new Date(); // Create a new date object and store it in a variable named today
-const fullName= 'Tianna Spears'; // Create name variable
+const fullName= 'by Tianna Spears'; // Create name variable
 
 const thisYear= today.getFullYear(); // Retrieve the current year from your date object and store it in a variable named thisYear
 
@@ -16,26 +16,24 @@ footer.appendChild(copyright); // Using "DOM Manipulation", append the copyright
 
 console.log(copyright); // it works!!!
 
-// Code for Lesson 4.2 (Create List of Skills)
+// Lesson 4.2 Homework (Create List of Skills)
+// List your technical skills by creating an Array of String values and store it in a variable named skills
+// * changed to create an array of experiences and stored in variable named experience
 
-// const skills = ['HTML','JavaScript', 'CSS', 'Git', 'GitHub', 'Visual Studio Code', 'GitLab']; // List your technical skills by creating an Array of String values and store it in a variable named skills
-const skillsLogos= ['images/html_logo.png', 'images/css_logo.png', "images/javascript_logo.png",
-'images/devtools_logo.png', 'images/git_logo.png', 'images/github_logo.png', 
-'images/gitlab_logo.png', 'images/npm_logo.png', 'images/vsc_logo.png'
-];
+const experiences = ['Programming Bootcamp at Code The Dream ( Sep. 2023 - Current )',
+'Front-End Engineer Career Path at Codecademy ( Jul. 2023 - Current )',
+'Learn JavaScript, Codecademy Certificate ( Oct. 2023 ) - 25 hours'];
 
-/Users/tiannaspears/intro-to-programming-2023/images/css_logo.png
+const experienceSection= document.getElementById('experienceList'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 
-const skillsSection= document.getElementById('skills'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
+const experienceList= experienceSection.querySelector('ul'); // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
 
-const skillsList= skillsSection.querySelector('ul'); // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
+for (let i = 0; i < experiences.length; i++) { // Create a for loop to iterate over your skills Array, starting at index 0
 
-for (let i = 0; i < skillsLogos.length; i++) { // Create a for loop to iterate over your skills Array, starting at index 0
-  let skill = document.createElement('li');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
-  let skillImage= document.createElement('img');
-  skillImage.src= skillsLogos[i];
-  // skill.innerText = skills_logos[i]; // On the next line, set the inner text of your skill variable to the value of the current Array element
-  skillsList.appendChild(skill); // On the next line, append the skill element to the skillsList element
+let experience = document.createElement('li');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
+
+experience.innerText = experiences[i]; // On the next line, set the inner text of your skill variable to the value of the current Array element
+experienceList.appendChild(experience); // On the next line, append the skill element to the skillsList element
 }
 
 // Homework 4-3 (Handle Message Form Submit and Display Messages in List)
@@ -56,7 +54,7 @@ function callBack (event) {
 
 // Display Messages in List - 4.3 HW Question //
 
-    const messageSection= document.getElementById('message_display');
+    const messageSection= document.getElementById('msgdisplay');
     const messageList= messageSection.querySelector('ul');
     
     const newMessage= document.createElement('li');
@@ -104,7 +102,7 @@ hideMessageDisplay();
 // 4.3 HW Question Stretch Goal-- Hide #messages section when list is empty
 
     function hideMessageDisplay() {
-      const messageSection= document.getElementById('message_display');
+      const messageSection= document.getElementById('msgdisplay');
       const messageList= messageSection.querySelector('ul');
   
       if (messageList.children.length === 0) {
@@ -122,7 +120,7 @@ hideMessageDisplay();
       hideMessageDisplay();
     });
 
-    const messageSection= document.getElementById('message_display');
+    const messageSection= document.getElementById('msgdisplay');
     messageSection.style.display= 'none';
     const editButton= document.getElementById('editButton');
 
@@ -143,12 +141,22 @@ githubRequest.onload = function () {
 const projectSection= document.getElementById('projects');
 const projectList= projectSection.querySelector('ul');
 
-for (let i= 0; i < repositories.length; i++) {
+// Limit number of repositories shown-- (my preference)
+
+const limit= 7;
+let i= 3;
+
+for (let i= 3; i < repositories.length; i++) {
+
+  if (i>= limit) {
+    break;
+  }
   const project= document.createElement('li');
 
   // Lesson 6-1 Stretch Goals-- Transform repository names into <a> tags that link to GitHub
   // Display additional repository information
   // Customize styling of Projects Section List-- look in CSS
+
   const reposLinks= document.createElement('a');
 
   reposLinks.href= repositories[i].html_url;
@@ -157,15 +165,12 @@ for (let i= 0; i < repositories.length; i++) {
   const reposDescription= document.createElement('p');
   reposDescription.textContent= repositories[i].description;
 
-  const createdAt = document.createElement('p');
-
   const normalDate= new Date(repositories[i].created_at);
-  createdAt.textContent= 'Created on: ' + normalDate.toLocaleDateString();
+
+  reposDescription.textContent= repositories[i].description + ' ; ' + ' Created on ' + normalDate.toLocaleDateString();
 
   project.appendChild(reposLinks);
   project.appendChild(reposDescription);
-  project.appendChild(createdAt);
-
   projectList.appendChild(project);
   }
 };
