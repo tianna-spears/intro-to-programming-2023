@@ -1,70 +1,83 @@
 /* Universal Styling */
 
 * {
-    font-family: "Hedvig Letters Sans", Helvetica, sans-serif;
     box-sizing: border-box;
 }
 
 /* Body Styling*/
 
-body {
-    margin: 25px;
-    /* min-width: auto;
+/* body {
+    font-family: 'Bungee Spice', sans-serif;  
+    font-family: "Hedvig Letters Sans", Helvetica, sans-serif; 
+    min-width: auto;
     min-height: auto;
     max-width: 800px;
-    max-height: auto; */
+    max-height: auto;
+} */
+
+
+/* Header // Social Media Icons*/
+
+.fa { 
+    padding: 10px; 
+    width: 35px; 
+    margin-left: 10px;
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    text-align: start; 
+    float: left;
+} 
+
+.fa-github { 
+    background: black; 
+    color: white; 
+} 
+
+.fa-linkedin { 
+    background: #007bb5; 
+    color: white; 
+} 
+
+
+.navbar {
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    text-align: start;       
 }
+    
+.navbar a{
+    color: black;
+    padding: 10px;
+    font-family: 'Scope One', serif;
+    font-size: 20px;
+    }
+    
+.navbar a:hover {
+    font-size: 22px;
+    opacity: 0.8;
+    background-color: skyblue;
+}
+
 
 /* Grid Container */
 
+
 .grid_container {
     display: grid;
-    padding: 15px;
-    grid-template-rows: repeat (7, 2fr);
+    padding: 10px;
+    /* min-width: auto;
+    max-width: auto;
+    min-height: auto;
+    max-height: auto; */
+    grid-template-rows: auto auto auto auto;
     grid-template-columns: repeat (2, 1fr);
     grid-template-areas:
-    'nav nav'
-    'about about'
-    'skills_exp skills_exp'
+    'about skills'
     'projects projects'
     'contact contact'
-    'message_display message_display '
-    'footer footer';
-    /* gap: 25px 25px; 
-    /* justify-items: center; */
-    min-width: auto;
-    max-height: auto;
-}
-
-/* Header// Navigation Bar */
-
-nav {
-grid-area: nav;
-
-}
-
-nav ul {
-    display: flex;
-    justify-content: flex-end;    
-    list-style-type: none;
-    font-size: 25px;
-    overflow: hidden;
-    padding: 15px;
-    background-color: darkslateblue;
-}
-
-nav li a{
-    color: white;
-    padding: 10px;
-    font-size: 25px;
-    text-decoration: none;
-}
-
-nav a:hover {
-    font-size: 27px;
-    opacity: 0.8;
-    background-color: whitesmoke;
-    color: black;
+    'msgdisplay msgdisplay'
 }
 
 
@@ -72,114 +85,87 @@ nav a:hover {
 
 .about {
     grid-area: about;
-    /* background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8; */
-    padding: 50px;
-    /* min-width: auto;
-    max-height: auto; */
-    border: 3px solid white;
-    background-color: darkslateblue;
+    text-align: center;
+
+    /* box-shadow: 20px 20px #5785D8;  */
 }
 
-.about img{
-    border-radius: 50%;
-    border: 5px dotted #5785D8;
+.about img {
+    border-radius: 60%;
+    border: 2px dotted #007bb5;
     float: right;
-    padding: 50px;
-    margin: 10px;
+    padding: 10px;
+    margin: 25px;
+    /* height: auto;
+    width: auto; */
 }
 
-.intro, .intro2{
-    grid-area: about;
-    font-size: 25px;
-    padding: 20px;
-    border: 3px solid white;
+.about1 h1{
+    font-family: 'Bungee Spice', sans-serif;
     text-align: center;
-    color: white;
+
 }
 
-.gitHub, .linkedIn, .email {
-    border-radius: 15px;
-    padding: 20px;
-    font-size: 40px;
-}
-
-/* .gitHub, .linkedIn, .email:hover{  
-    font-size: 25px;
-    opacity: 0.8;
-}  */
-
-/* .about p{
-    font-size: 30px;
-    font-style: italic;
-    text-decoration: underline;
-    font-size: 30px;
+.about2 p{
+    font-family: 'Scope One', sans-serif;
+    font-size: 27px;
     text-align: center;
-    color: darkslateblue;
-    font-weight: bold;
+
+
+}
+
+/* .github, .linkedin, .email {
+    padding: 15px;
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 15px;
 } */
 
 
+/* Skills and Technical Experience */
 
-
-
-/* Skills and Experience */
 
 .skills{
-    grid-area: skills_exp;
-    background-color: whitesmoke;
-    /* border: 3px solid #5785D8; */
+    grid-area: skills;
     padding: 15px;
-    font-size: 28px;
+    background-color: antiquewhite;
+    /* list-style-type: none; */
+    /* overflow: hidden; */
+    font-family: 'Scope One', sans-serif;
+
+    /* justify-content: center; */
+    /* 
+    border: 3px solid #5785D8;
     align-items: center;
     justify-content: center;
     place-self: center;
-    /* min-width: auto;
-    max-height: auto; */
-    text-align: center;
-    /* box-shadow: 20px 20px #5785D8; */ 
+    min-width: auto;
+    max-height: auto;
+    text-align: left;
+    box-shadow: 20px 20px #5785D8; 
+    */ 
 }
 
-/* .skills h2{
-    padding: 20px;
-    border: 1px solid #5785D8;
-    box-shadow: 5px 5px #5785D8;
-    text-align: center;
-} */
 
-.skills button{
-    margin: 5px;
-    padding: 20px;
-    font-size: 24px;
-    align-items: center;
-    justify-content: center;
-    width: auto;
-    border-radius: 15px;
-    background-color: darkslateblue;
-    color: white;
-}
-
-/* .experience {
-    grid-area: skills_exp;
-    border: 3px solid #5785D8;
-    background-color: whitesmoke;
-    box-shadow: 20px 20px #5785D8;
-}
-
-.experience h2{
-    padding: 20px;
-    border: 1px solid #5785D8;
-    box-shadow: 5px 5px #5785D8;
+.skills h2{
     text-align: center;
 }
 
-.experience p{
-    font-size: 28px;
+.experienceList ul {
+    font-size: 20px;
+    /* display: flex; */
+    list-style-type: none;
+    overflow: hidden;
     padding: 20px;
     margin: 15px;
-    border: 1px solid darkslateblue;
-    text-align: center;
-} */
+}
+
+.skillsImages {
+    display: inline-flex;
+    width: 30px; 
+    height: 30px;
+}
+
+
 
 
 /* Projects  */
@@ -187,18 +173,13 @@ nav a:hover {
 .projects {
     grid-area: projects;
     padding: 20px;
-    /* border: 3px solid white; */
-    /* background-color: darkslateblue; */
-
-    background-image: url('../images/background3.jpg');
-    background-size: fill; 
+    /* border: 3px solid white;
+    background-color: darkslateblue; */
 } 
 
 .projects h2{
     font-size: 25px;
     padding: 20px;
-    border: 3px solid white;
-    background-color: white;
     text-align: center;
     color: black;
 }
@@ -209,44 +190,25 @@ nav a:hover {
     background-color: whitesmoke;
 } 
 
+/* .projectImages {
+    display: inline-flex;
+    width: 50px; 
+    height: 50px;
+} */
 
-
-/* Project Slides
-
-.project_slides {
-    grid-area: project_slides;
-}
-
-.project_slides {
-    background-color: whitesmoke;
-    padding: 25px;
-    margin: 10px;
-    display: inline-block;
-    border: 10px solid darkslateblue;
-    text-align: center;
-    max-width: 300px;
-    max-height: 600px; 
-    align-content: center;
-}
-
-.project_slides {
-    text-align: center;
-    font-size: 30px;
-}  */
 
 /* Contact */
 
 .contact {
     grid-area: contact;
+    background-color: antiquewhite;
 }
 
-.leave_message {
-    grid-area: message_display;
+.contact form { /* Form (below) is called Leave A Message */
     text-align: center;
-    background-color: darkslateblue;
     border: 6px solid black;
     padding: 25px;
-    color: white;
+    color: black;
 }
 
 .leave_message h2 {   
@@ -257,20 +219,13 @@ nav a:hover {
     justify-content: center;
 } 
 
-.leave_message label{
-    font-size: 30px;
-}
-
-.leave_message input {
-    font-size: 30px;
-}
-
+#usersName,
+#usersEmail,
 #usersMessage {
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .submit_button{
-    display: flex;
     margin: 25px;
     padding: 20px;
     font-size: 25px;
@@ -288,10 +243,12 @@ nav a:hover {
     align-items: center;
 }
 
+
 /* Message Display */
 
-.message_display{
-    grid-area: message_display;  
+
+.msgdisplay{
+    grid-area: msgdisplay;  
     margin: 25px;
     background-color: whitesmoke;
     box-shadow: 10px 10px #5785D8;
@@ -302,7 +259,7 @@ nav a:hover {
     border: 6px solid black;
 }
 
-.message_display h2 {   
+.msgdisplay h2 {   
     display: flex;
     padding: 20px;
     border: 1px solid #5785D8;
@@ -312,15 +269,15 @@ nav a:hover {
     justify-content: center;
 } 
 
-.message_display ul{
+.msgdisplay ul{
     font-size: 48px;
 }
 
 
 /* Footer */
 
+
 footer{
-    grid-area: footer;
     padding: 10px;
     font-size: 22px;
     text-align: left;
