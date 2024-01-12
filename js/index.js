@@ -56,7 +56,6 @@ function callBack (event) {
 
     const messageSection= document.getElementById('msgdisplay');
     const messageList= messageSection.querySelector('ul');
-    
     const newMessage= document.createElement('li');
     
     newMessage.innerHTML= '<a href=" mailto: ' + usersEmail + '" > ' 
@@ -144,11 +143,10 @@ const projectList= projectSection.querySelector('ul');
 // Limit number of repositories shown-- (my preference)
 
 const limit= 7;
-let i= 3;
 
 for (let i= 3; i < repositories.length; i++) {
 
-  if (i>= limit) {
+  if (i> limit) {
     break;
   }
   const project= document.createElement('li');

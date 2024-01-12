@@ -7,7 +7,7 @@
 
 /* Body Styling*/
 
-/* body {
+/* fonts {
     font-family: 'Bungee Spice', sans-serif;  
     font-family: "Hedvig Letters Sans", Helvetica, sans-serif; 
 }  */
@@ -238,7 +238,7 @@
 }
 
 .submit_button p {   
-    font-size: 12px;
+    font-size: 11px;
 } 
 
 
@@ -254,7 +254,6 @@
 }
 
 .msg h2 {   
-    padding: 20px;
     font-size: 28px;
 } 
 
