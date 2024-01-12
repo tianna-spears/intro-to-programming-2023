@@ -57,17 +57,22 @@
 
 .newgrid {
     display: grid;
-    grid-template-rows: repeat(4, minmax(300px, 600px));
+    grid-template-rows: repeat(5, minmax(200px, 500px));
     grid-template-columns: 1fr 1fr; 
     grid-template-areas:
     "one two"
     "three three"
-    "four four"
-    "five five";
+    "four five"
+    "six six"
+    "seven seven";
     border: black solid 5px;
 }
 
-.one, .two, .three, .four, .five {
+
+
+
+.one, .two, .three, .four, .five, 
+.six, .seven {
     border: pink solid 5px;
 }
 
@@ -81,7 +86,26 @@
 
 .three {
     grid-area: three;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#skillsImages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.skillsImages img{
+    max-width: 15%;
+    max-height: 15%;
+    margin: 5px;
+    object-fit: contain;
+}
+
 
 .four {
     grid-area: four;
@@ -91,8 +115,13 @@
     grid-area: five;
 }
 
+.six {
+    grid-area: six;
+}
 
-
+.seven {
+    grid-area: seven;
+}
 
 
 
