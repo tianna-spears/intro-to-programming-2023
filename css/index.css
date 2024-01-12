@@ -19,7 +19,7 @@
     padding: 10px; 
     width: 45px; 
     margin-left: 10px;
-    display: inline-flex;
+    display: inline-block;
     list-style-type: none;
     text-align: start; 
 } 
@@ -35,10 +35,8 @@
 } 
 
 .navbar {
-    display: flex;
+    display: inline-flex;
     list-style-type: none;
-    overflow: hidden;
-    justify-content: start;       
 }
     
 .navbar a{
@@ -55,21 +53,69 @@
 }
 
 
+/*  CSS Grid! Let's try again*/
+
+.newgrid {
+    display: grid;
+    grid-template-rows: repeat(4, minmax(300px, 600px));
+    grid-template-columns: 1fr 1fr; 
+    grid-template-areas:
+    "one two"
+    "three three"
+    "four four"
+    "five five";
+    border: black solid 5px;
+}
+
+.one, .two, .three, .four, .five {
+    border: pink solid 5px;
+}
+
+.one {
+    grid-area: one;
+}
+
+.two {
+    grid-area: two;
+}
+
+.three {
+    grid-area: three;
+}
+
+.four {
+    grid-area: four;
+}
+
+.five {
+    grid-area: five;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Flex Container */
 
 
-.flex_container {
+/* .flex_container {
     display: flex;
     flex-direction: column;
 }
 
 
-/* About */
+/* About 
 
 /* .about {
     background-image: url('../images/background.jpg'); 
-*/
-
 
 .about h1{
     font-family: 'Bungee Spice', sans-serif;
@@ -93,18 +139,17 @@
     border: 2px dotted #007bb5;
     width: 10%;
     height: 10%;
-    /* float: right; */
-}
+    float: right;
 
 .skillImages img{
     display: inline-flex;
     width: 20px; 
     height: 20px;
-}
+} */
 
 
 
-/* Skills and Technical Experience */
+/* Skills and Technical Experience 
 
 
 .skills {
@@ -115,7 +160,7 @@
 }
 
 /* .skills h2{
-} */
+} 
 
 .experienceList ul {
     font-size: 20px;
@@ -126,7 +171,7 @@
 
 
 
-/* Projects  */
+/* Projects  
 
 .projects {
     background-color: darkslateblue;
@@ -145,7 +190,7 @@
     background-color: whitesmoke;
 } 
 
-/* Contact */
+/* Contact 
 
 .contact {
     background-color: antiquewhite;
@@ -162,7 +207,6 @@
 .leave_message h2 {   
     text-decoration: underline;
     text-align: center;
-    /* font-size: 40px; */
     justify-content: center;
 } 
 
@@ -192,7 +236,7 @@
 } 
 
 
-/* Message Display */
+/* Message Display 
 
 
 .msgdisplay{
@@ -210,7 +254,7 @@
 
 .msgdisplay ul{
     font-size: 25px;
-}
+} */
 
 
 /* Footer */
