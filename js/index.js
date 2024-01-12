@@ -163,8 +163,6 @@ for (let i= 3; i < repositories.length; i++) {
   reposLinks.textContent= repositories[i].name;
 
   const reposDescription= document.createElement('p');
-  reposDescription.textContent= repositories[i].description;
-
   const normalDate= new Date(repositories[i].created_at);
 
   reposDescription.textContent= repositories[i].description + ' ; ' + ' Created on ' + normalDate.toLocaleDateString();
@@ -176,39 +174,3 @@ for (let i= 3; i < repositories.length; i++) {
 };
 
 githubRequest.send();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//   to input a new/modified message
-
-//   Stuck. Commenting to come back later
-//     editButton.addEventListener('click', function () {
-//       const editText= editButton.childNode;
-//     editButton.appendChild(newMessage);
-
-//     practice for infinite scrolling banner but in JS-- 
-//   const banners= ['PROJECTS', 'PROJECTS', 'PROJECTS', 'PROJECTS'];
-//   const getBanner= document.getElementById('projects');
-//   const runBanner= getBanner.querySelector('h1');
-
-//   for (let i=0; i< banners.length; i++) {
-//   let banner= document.createElement('p');
-//   banner.innerText= banners[i];
-//   runBanner.appendChild(banner);
-//   }

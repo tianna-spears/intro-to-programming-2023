@@ -3,103 +3,91 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="first website design" content="Portfolio">
+    <meta name="description" content="Portfolio of Tianna Spears - Frontend Developer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
     <title> Portfolio, Tianna Spears</title>
 </head>
 
-<body>
-
 <header>     
     <nav>
         <a href="https://github.com/tianna-spears" target="_blank" class="fa fa-github"></a> 
-        <a href="https://www.linkedin.com/in/tiannasp" target="_blank" class="fa fa-linkedin"></a> 
-        
+        <a href="https://www.linkedin.com/in/tiannasp" target="_blank" class="fa fa-linkedin"></a>
+    </nav> 
         <ul class="navbar">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills & Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#leave_message">Contact</a></li>  
         </ul>
-    </nav>
 </header>
 
-
-<div class="grid_container">
-
+<body>
+<div class="flex_container">
 
     <div class="about" id="about"> 
-
-        <img src="./images/cartoon photo.png" alt="profile" style= " height: 20%"> 
-
-        <div class="about1"> 
-           <h1> Hi, <br> I'm Tianna! <br> &#8595; <br>
+        <h1> Hi, <br> I'm Tianna! <br> &#8595 <br>
             Frontend Developer bringing creative <br> ideas to life.
-            <br> &#8595; </h1>
-        </div>
+            <br> &#8595 
+        </h1>
      
-        <div class="about2">
-            <p> I'm currently a Programming Student at <a href="https://codethedream.org/" target="_blank">Code The Dream.</a>
-            <br> Let's connect! </p> 
-                <button class="github"> 
-                    <i class="fa-brands fa-github" ></i>
-                    <a href="https://github.com/tianna-spears" target="_blank">GitHub</a>
-                </button>
-    
-                <button class="linkedin">
-                    <i class="fa-brands fa-linkedin"></i>  
-                    <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a>
-                </button> 
-        </div>
+        <p> I'm currently a Programming Student <br> at <a href="https://codethedream.org/" target="_blank">Code The Dream.</a>            
+            <br> Let's connect! 
+        </p>
+
+        <button> 
+            <i class="fa fa-github"></i>            
+            <a href="https://github.com/tianna-spears" target="_blank">GitHub</a>           
+        </button>
+                        
+        <button>
+            <i class="fa fa-linkedin"></i>  
+            <a href="https://www.linkedin.com/in/tiannasp" target="_blank">LinkedIn</a>
+        </button> 
+    </div>
+
+    <div class="aside" id="aside">
+
+        <img src="./images/cartoon photo.png" alt="profile picture" style="height: 30%"> 
+
+            <div class="skillsImages" id="skillImages"> 
+                <img src="./images/html_logo.png" alt="HTML Logo">
+                <img src="./images/css_logo.png" alt="CSS Logo">
+                <img src="./images/js_logo.jpeg" alt="JavaScript Logo">            
+                <img src="./images/github_logo.png" alt="GitHub Logo">                
+                <img src="./images/git_logo.png" alt="Git Logo">
+                <img src="./images/gitlab_logo.png" alt="GitLab Logo">            
+                <img src="./images/npm_logo.png" alt="NPM Logo">
+                <img src="./images/vsc_logo.png" alt="Visual Studio Code Logo">
+                <img src="./images/devtools_logo.jpeg" alt="Chrome Dev Tools Logo">
+            </div>
     </div>
     
-    
-    <div class="skills" id="skills">
+
+    <div class="skills" id="skills"> 
         <h2> Skills & Technical Experience </h2>
 
         <div class="experienceList" id="experienceList"> 
-            <ul> </ul>
+            <ul></ul>
         </div>
-            
-        <div class="skillsImages">
-            <img src="./images/html_logo.png" alt="HTML Logo">
-            <img src="./images/css_logo.png" alt="CSS Logo">
-            <img src="./images/js_logo.jpeg" alt="JavaScript Logo">
-            <img src="./images/github_logo.png" alt="GitHub Logo">                
-            <img src="./images/git_logo.png" alt="Git Logo">
-            <img src="./images/gitlab_logo.png" alt="GitLab Logo">
-            <img src="./images/npm_logo.png" alt="NPM Logo">
-            <img src="./images/vsc_logo.png" alt="Visual Studio Code Logo">
-            <img src="./images/devtools_logo.jpeg" alt="Dev Tools Logo">
-        </div>
-
     </div>
-
-
 
 
     <div class="projects" id="projects">
-            <h2> Projects </h2>
-                <ul></ul>
+        <h2> Projects </h2>
+            <ul></ul>
     </div>
 
 
-    <div class="contact">
-
+    <div class="contact" id="contact">
         <form class="leave_message" id="leave_message">
-            <h2>Leave a Message</h2>    <br> 
+            <h2>Leave a Message</h2>
     
             <label for="usersName">User's Name:</label>
                 <input type="text" id="usersName" required>
@@ -111,12 +99,12 @@
     
             <label for="usersMessage">Message:</label>
                 <textarea id="usersMessage" required> </textarea>
-                <br> <br>
+                <br> 
     
             <button class="submit_button"  type="submit">Submit</button> 
-                <br> <br> <br>
-                    <p> Please keep in mind that all submitted messages
-                    will be dislayed publicly. </p>
+                <br> 
+                <p> Please keep in mind that all submitted messages
+                will be dislayed publicly. </p>
         </form>
     </div>
 
@@ -126,16 +114,14 @@
             <ul></ul>
     </div> 
 
- 
 
 </div>
 
+    <footer>  
+        <script src="js/index.js"> </script>
+        <script src="https://kit.fontawesome.com/508c73f11a.js" crossorigin="anonymous"></script>
+    </footer>
+
 </body>
-
-<footer>  
-    <script src="js/index.js"> </script>
-    <script src="https://kit.fontawesome.com/508c73f11a.js" crossorigin="anonymous"></script>
-</footer>
-
 
 </html>
