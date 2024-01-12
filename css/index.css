@@ -60,67 +60,67 @@
     grid-template-rows: repeat(5, minmax(200px, 500px));
     grid-template-columns: 1fr 1fr; 
     grid-template-areas:
-    "one two"
-    "three three"
-    "four five"
-    "six six"
-    "seven seven";
+    "about aside"
+    "skills skills"
+    "tech projects"
+    "contact contact"
+    "msg msg";
     border: black solid 5px;
 }
 
 
 
 
-.one, .two, .three, .four, .five, 
-.six, .seven {
+.about, .aside, .skills, .tech, .projects, 
+.contact, .msg {
     border: pink solid 5px;
 }
 
-.one {
-    grid-area: one;
+.about {
+    grid-area: about;
 }
 
-.two {
-    grid-area: two;
+.aside {
+    grid-area: aside;
 }
 
-.three {
-    grid-area: three;
+.skills {
+    grid-area: skills;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 #skillsImages {
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
 }
 
+
 .skillsImages img{
-    max-width: 15%;
-    max-height: 15%;
+    max-width: 20%;
+    max-height: 10%;
     margin: 5px;
     object-fit: contain;
 }
 
 
-.four {
-    grid-area: four;
+
+
+.tech {
+    grid-area: tech;
 }
 
-.five {
-    grid-area: five;
+.projects {
+    grid-area: projects;
 }
 
-.six {
-    grid-area: six;
+.contact {
+    grid-area: contact;
 }
 
-.seven {
-    grid-area: seven;
+.msg {
+    grid-area: msg;
 }
 
 
