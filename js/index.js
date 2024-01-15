@@ -54,7 +54,7 @@ function callBack (event) {
 
 // Display Messages in List - 4.3 HW Question //
 
-    const messageSection= document.getElementById('msgdisplay');
+    const messageSection= document.getElementById('msg');
     const messageList= messageSection.querySelector('ul');
     
     const newMessage= document.createElement('li');
@@ -102,7 +102,7 @@ hideMessageDisplay();
 // 4.3 HW Question Stretch Goal-- Hide #messages section when list is empty
 
     function hideMessageDisplay() {
-      const messageSection= document.getElementById('msgdisplay');
+      const messageSection= document.getElementById('msg');
       const messageList= messageSection.querySelector('ul');
   
       if (messageList.children.length === 0) {
@@ -120,7 +120,7 @@ hideMessageDisplay();
       hideMessageDisplay();
     });
 
-    const messageSection= document.getElementById('msgdisplay');
+    const messageSection= document.getElementById('msg');
     messageSection.style.display= 'none';
     const editButton= document.getElementById('editButton');
 
@@ -144,9 +144,8 @@ const projectList= projectSection.querySelector('ul');
 // Limit number of repositories shown-- (my preference)
 
 const limit= 7;
-let i= 3;
 
-for (let i= 3; i < repositories.length; i++) {
+for (let i= 0; i < repositories.length; i++) {
 
   if (i>= limit) {
     break;
