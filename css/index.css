@@ -57,7 +57,7 @@
 
 .newgrid {
     display: grid;
-    grid-template-rows: repeat(5, minmax(200px, 500px));
+    grid-template-rows: repeat(5, minmax(300px, 600px));
     grid-template-columns: 1fr 1fr; 
     grid-template-areas:
     "about aside"
@@ -71,10 +71,10 @@
 
 
 
-.about, .aside, .skills, .tech, .projects, 
+/* .about, .aside, .skills, .tech, .projects, 
 .contact, .msg {
     border: pink solid 5px;
-}
+} */
 
 .about {
     grid-area: about;
@@ -205,7 +205,7 @@
 
 
 .experienceList ul {
-    font-size: 20px;
+    font-size: 22px;
     list-style-type: circle;
     overflow: hidden;
     margin: 15px;
@@ -229,8 +229,12 @@
 }
 
 .projects ul {
-    font-size: 22px;
+    font-size: 10px;
     padding: 15px;
+    list-style-type: circle;        overflow: hidden;
+    margin: 15px;
+    font-family: 'Scope One', sans-serif;
+    text-align: start;
 } 
 
 /* Contact */

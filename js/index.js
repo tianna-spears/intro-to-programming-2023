@@ -126,35 +126,44 @@ hideMessageDisplay();
 
     hideMessageDisplay();
 
-// Homework Lesson 6-1
-
-// Fetch GitHub Repositories
+/* Homework Lesson 6-1 
+Fetch GitHub Repositories & Handle Response from Server
 const githubRequest =new XMLHttpRequest();
 githubRequest.open('GET', 'https://api.github.com/users/tianna-spears/repos');
-
-// Handle Response from Server
 githubRequest.onload = function () {
-  const repositories= JSON.parse(githubRequest.responseText);
+const repositories= JSON.parse(githubRequest.responseText); */
 
-// Display Repositories in List
 
+
+// Lesson 6-2, Turn AJAX request to API! //
+
+const githubRequest= 'https://api.github.com/users/tianna-spears/repos';
+
+fetch(githubRequest)
+  .then(response =>  {
+    if(!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(repositories => {  
+
+// Display Repositories in List, Limit number of repositories shown */
 const projectSection= document.getElementById('projects');
 const projectList= projectSection.querySelector('ul');
+const limit= 11;
 
-// Limit number of repositories shown-- (my preference)
+for (let i= 5; i < repositories.length; i++) {
 
-const limit= 7;
-
-for (let i= 0; i < repositories.length; i++) {
-
-  if (i>= limit) {
+  if (i >= limit) {
     break;
   }
-  const project= document.createElement('li');
 
   // Lesson 6-1 Stretch Goals-- Transform repository names into <a> tags that link to GitHub
   // Display additional repository information
   // Customize styling of Projects Section List-- look in CSS
+
+  const project= document.createElement('li');
 
   const reposLinks= document.createElement('a');
 
@@ -170,6 +179,8 @@ for (let i= 0; i < repositories.length; i++) {
   project.appendChild(reposDescription);
   projectList.appendChild(project);
   }
-};
 
-githubRequest.send();
+})
+.catch(error => {
+  console.log('Error fetching data:', error);
+});
