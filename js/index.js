@@ -21,8 +21,7 @@ console.log(copyright); // it works!!!
 // * changed to create an array of experiences and stored in variable named experience
 
 const experiences = ['Programming Bootcamp at Code The Dream ( Sep. 2023 - Current )',
-'Front-End Engineer Career Path at Codecademy ( Jul. 2023 - Current )',
-'Learn JavaScript, Codecademy Certificate ( Oct. 2023 ) - 25 hours'];
+'Front-End Engineer Career Path at Codecademy ( Jul. 2023 - Current )'];
 
 const experienceSection= document.getElementById('experienceList'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 
@@ -67,7 +66,7 @@ function callBack (event) {
 
 const editButton= document.createElement('button');
 editButton.id= 'editButton';
-editButton.innerText=  ' Edit ';
+editButton.innerText=  ' edit ';
 
 editButton.addEventListener("click", function () {
   const editedMessage= prompt("Edit your message here:", usersMessage)

@@ -1,27 +1,23 @@
 /* Universal Styling */
 
-/* * {
-    /* box-sizing: border-box; */
-/* max-height: 600px; */
+/* {
+box-sizing: border-box;
+max-height: 600px; */
 
-
-/* Body Styling*/
-
-/* body {
-    font-family: 'Bungee Spice', sans-serif;  
-    font-family: "Hedvig Letters Sans", Helvetica, sans-serif; 
-}  */
 
 
 /* Header // Social Media Icons*/
 
+
 .fa { 
-    padding: 10px; 
-    width: 45px; 
-    margin-left: 10px;
     display: inline-block;
     list-style-type: none;
-    text-align: start; 
+    text-align: center; 
+    font-family: 'Scope One', serif;
+    font-size: 25px;
+    padding: 10px; 
+    margin: 5px;
+    width: 45px; 
 } 
 
 .fa-github { 
@@ -34,47 +30,57 @@
     color: white; 
 } 
 
+.fa:hover{
+    opacity: 0.8;
+}
+
 .navbar {
     display: inline-flex;
     list-style-type: none;
+    padding: 10px;
 }
     
 .navbar a{
-    color: black;
-    padding: 10px;
+    color: #007bb5;
+    padding: 15px;
     font-family: 'Scope One', serif;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight:bold;
 }
     
 .navbar a:hover {
-    font-size: 22px;
     opacity: 0.8;
-    background-color: skyblue;
+    padding: 10px;
 }
 
 
-/*  CSS Grid! Let's try again*/
+/*  CSS Grid!- 7 total sections*/
 
 .newgrid {
     display: grid;
-    grid-template-rows: repeat(5, minmax(300px, 600px));
-    grid-template-columns: 1fr 1fr; 
+    gap: 25px;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    grid-template-rows: repeat(4, minmax(500px));
+    grid-template-columns: repeat(2, 2fr); 
     grid-template-areas:
     "about aside"
     "skills skills"
     "tech projects"
     "contact contact"
     "msg msg";
-    border: black solid 10px;
+    background-image: url(../images/pic3.jpg);
+    background-color: white;
+    background-size: contain;
+    object-fit: fill;
 }
 
-
-
-
-/* .about, .aside, .skills, .tech, .projects, 
+.about, .aside, .skills, .tech, .projects, 
 .contact, .msg {
-    border: pink solid 5px;
-} */
+    border: mediumturquoise solid 1px;
+    font-size: 20px;
+}
 
 .about {
     grid-area: about;
@@ -86,22 +92,7 @@
 
 .skills {
     grid-area: skills;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#skillsImages {
-    display: inline-flex;
-    flex-wrap: wrap;
-}
-
-
-.skillsImages img{
-    max-width: 50%;
-    max-height: 10%;
-    margin: 5px;
-    object-fit: contain;
+    background-color: whitesmoke;
 }
 
 .tech {
@@ -124,137 +115,134 @@
 /* About */
 
 .about {
-    text-align: center;
+    padding: 15px;
 }
 
-.about h1{
+.about h1, h2{
     font-family: 'Bungee Spice', sans-serif;
-    font-size: 25px;
+    margin: 10px;
+}
+
+.about h2 {
+    border: dotted darkcyan 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5%;
 }
 
 .about p{
     font-family: 'Scope One', sans-serif;
-    font-size: 20px;
-}
-
-.about button {
-    font-family: 'Bungee Spice', sans-serif;
+    font-size: 22px;
 }
 
 
 /* Aside (profile pic) */
 
 .aside {
-    font-family: 'Bungee Spice', sans-serif;
-    text-align: center;
+    padding: 15px;
 }
-
 
 .aside img {
-    border-radius: 30%;
+    border-radius: 75%;
     width: 50%;
-    height: 40%;
-}
-    
-.aside a{
-    padding: 10px;
-    font-family: 'Scope One', serif;
-    font-size: 20px;
+    display: inline-flex;
+    border: solid darkcyan 2px;
 }
 
 .aside p{
     font-family: 'Scope One', sans-serif;
-    font-size: 20px;
-}
-    
-.aside a:hover {
     font-size: 22px;
-    opacity: 0.8;
-    background-color: skyblue;
+}
+
+.aside div{
+    display: inline-flex;
+}
+
+.aside a{
+    font-size: 40px;
+}
+
+.aside_connect h1{
+    font-family: 'Bungee Spice', sans-serif;
+    border: dotted darkcyan 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 5%;
+}
+
+.aside a:hover {
+    opacity: 0.5;
+    background-color: #007bb5;
 }
 
 
 /* Skills and Technical Experience */
 
-
 .skills {
-    background-color: antiquewhite;
-    list-style-type: none;
-    overflow: hidden;
-    font-family: 'Scope One', sans-serif;
-    text-align: center;
-    font-size: 40px;
-
+    grid-area: skills;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    font-family: 'Bungee Spice', sans-serif;
 }
 
-.skillImages img{
-    display: inline-flex;
-    width: 40px; 
-    height: 40px;
+
+
+.skillsImages img{
+    flex-wrap: wrap;
+    max-width: auto;
+    margin: 20px;
+    object-fit: contain;
 }
 
 
 /* Technical Experience List*/
 
-.tech h2{
-    font-family: 'Scope One', sans-serif;
-    font-size: 25px;
-    text-decoration: underline;
+.tech {
+    font-family: 'Bungee Spice', sans-serif;
+    padding: 15px;
     text-align: center;
 }
 
-
-.experienceList ul {
-    font-size: 22px;
-    list-style-type: circle;
-    overflow: hidden;
+.experienceList ul, .certList ul {
+    list-style-type: style type circle;;
     margin: 15px;
     font-family: 'Scope One', sans-serif;
     text-align: center;
+    font-size: 22px;
 }
-
 
 
 /* Projects  */
 
-.projects {
-    font-family: 'Scope One', sans-serif;
+.projects{
+    font-family: 'Bungee Spice', sans-serif;
+    font-size: 20px;
+    padding: 15px;
     text-align: center;
-
-} 
-
-.projects h2{
-    font-size: 25px;
-    text-decoration: underline;
 }
 
 .projects ul {
-    font-size: 10px;
-    padding: 15px;
-    list-style-type: circle;        overflow: hidden;
-    margin: 15px;
-    font-family: 'Scope One', sans-serif;
+    font-size: 15px;
+    list-style-type: style type circle;;
     text-align: start;
+    font-family: 'Scope One', sans-serif;
 } 
 
 /* Contact */
-
-.contact {
-    background-color: antiquewhite;
-}
 
 .contact form {
     text-align: center;
     padding: 15px;
     color: black;
     font-family: 'Scope One', sans-serif;
-    font-size: 28px;
+    font-size: 22px;
 }
 
-.leave_message h2 {   
-    text-decoration: underline;
+.leave_message h1 {   
     text-align: center;
     justify-content: center;
+    font-family: 'Bungee Spice', sans-serif;
 } 
 
 #usersName,
@@ -264,15 +252,13 @@
 } 
 
 .submit_button{
-    padding: 10px;
-    font-size: 10px;
-    background-color: mediumseagreen;
-    text-decoration: underline;
+    padding: 20px;
+    font-size: 22px;
+    background-color: lightgreen;
 }
 
 .submit_button:hover{
-    background-color: darkgreen;
-    text-transform: uppercase;
+    background-color: mediumseagreen;
     color: white;
     align-items: center;
 }
@@ -286,15 +272,16 @@
 
 
 .msg{
-    background-color: antiquewhite;
     font-size: 20px;
     text-align: center;
     color: black;
     font-family: 'Scope One', sans-serif;
 }
 
-.msg h2,  .msg ul {   
-    padding: 20px;
+.msg h1 {   
+    text-align: center;
+    justify-content: center;
+    font-family: 'Bungee Spice', sans-serif;
 } 
 
 
@@ -303,10 +290,14 @@
 
 
 footer{
-    padding: 10px;
+    padding: px;
     font-size: 22px;
     color: darkslateblue;
 } 
+
+footer div{
+    font-size: 10px;
+}
 
 
 /* @media only screen and (max-width: 600px) {
