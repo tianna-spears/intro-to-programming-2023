@@ -1,23 +1,12 @@
-/* Universal Styling */
-
-/* {
-box-sizing: border-box;
-max-height: 600px; */
-
-
-
 /* Header // Social Media Icons*/
 
 
 .fa { 
-    display: inline-block;
     list-style-type: none;
-    text-align: center; 
     font-family: 'Scope One', serif;
-    font-size: 25px;
-    padding: 10px; 
-    margin: 5px;
-    width: 45px; 
+    font-size: 22px;
+    padding: 15px;
+    margin: 15px;
 } 
 
 .fa-github { 
@@ -34,69 +23,129 @@ max-height: 600px; */
     opacity: 0.8;
 }
 
+header{
+    position: sticky;
+    top: 0;
+    background-color: whitesmoke;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
 .navbar {
-    display: inline-flex;
+    display: flex;
+    font-family: 'Scope One', serif;
     list-style-type: none;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: whitesmoke;
 }
     
 .navbar a{
-    color: #007bb5;
-    padding: 15px;
-    font-family: 'Scope One', serif;
-    font-size: 25px;
-    font-weight:bold;
-}
+    display: flex;
+    justify-content: flex-start;
+    color: #007bb5; 
+    padding: 10px;
+    text-decoration: none;
+    font-size: 22px;
+}  
     
 .navbar a:hover {
     opacity: 0.8;
     padding: 10px;
+    text-decoration: underline;
 }
 
 
-/*  CSS Grid!- 7 total sections*/
+/* font-family: 'Scope One', sans-serif;
+font-family: 'Bungee Spice', sans-serif; 
+*/
 
-.newgrid {
-    display: grid;
-    gap: 25px;
+
+/* Fixed Page Background*/
+
+.fixed {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/pic1.jpg);
+    min-height: 500px;
     text-align: center;
+    align-items: center;
+    justify-items: center;
     justify-content: center;
-    align-content: center;
-    grid-template-rows: repeat(4, minmax(500px));
-    grid-template-columns: repeat(2, 2fr); 
-    grid-template-areas:
-    "about aside"
-    "skills skills"
-    "tech projects"
-    "contact contact"
-    "msg msg";
-    background-image: url(../images/pic10.webp);
-    background-color: white;
-    background-size: contain;
-    /* object-fit: fill; */
 }
 
-.about, .aside, .skills, .tech, .projects, 
+.fixed h1{
+    color: black;
+    float: left;
+    padding: 25px;
+    text-decoration: underline ;
+    background-color: whitesmoke;
+    opacity: 0.5;
+}
+
+
+.fixed_about{
+    color: black;
+    position: absolute;
+    top: 100px;
+    right: 15px;
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: whitesmoke;
+    letter-spacing: 3px;
+}
+
+
+/*  CSS Grid!- 5 total sections*/
+
+.grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    grid-template-areas:
+    "about about about"
+    "skills skills skills"
+    "tech tech certList"
+    "projects projects projects"
+    "contact contact contact"
+    "msg msg msg";
+    text-align: center;
+}
+
+
+/* .about, .skills, .tech, .certList, .projects,
 .contact, .msg {
-    border: mediumturquoise solid 1px;
-    font-size: 20px;
+    border: purple solid 1px;
+} */
+
+.skills, .projects, .msg{
+    border: purple solid 1px;
 }
 
 .about {
     grid-area: about;
 }
 
-.aside {
-    grid-area: aside;
-}
 
 .skills {
     grid-area: skills;
-    background-color: whitesmoke;
 }
 
 .tech {
     grid-area: tech;
+}
+
+.certList {
+    grid-area: certList;
 }
 
 .projects {
@@ -107,6 +156,14 @@ max-height: 600px; */
     grid-area: contact;
 }
 
+/* .photo1{
+    grid-area: photo1;
+}
+
+.photo2{
+    grid-area: photo2;
+} */
+
 .msg {
     grid-area: msg;
 }
@@ -114,132 +171,128 @@ max-height: 600px; */
 
 /* About */
 
-.about {
+.about{
+    font-family: 'Scope One', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     padding: 15px;
+    font-size: 22px;
 }
 
-.about h1, h2{
-    font-family: 'Bungee Spice', sans-serif;
-    margin: 10px;
+.about img {
+    border-radius: 65%;
+    width: 15%;
+    height: auto;
 }
 
 .about h2 {
-    border: dotted darkcyan 2px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 5%;
-}
-
-.about p{
-    font-family: 'Scope One', sans-serif;
-    font-size: 22px;
-}
-
-
-/* Aside (profile pic) */
-
-.aside {
-    padding: 15px;
-}
-
-.aside img {
-    border-radius: 75%;
-    width: 50%;
-    display: inline-flex;
-    border: solid darkcyan 2px;
-}
-
-.aside p{
-    font-family: 'Scope One', sans-serif;
-    font-size: 22px;
-}
-
-.aside div{
-    display: inline-flex;
-}
-
-.aside a{
-    font-size: 40px;
-}
-
-.aside_connect h1{
     font-family: 'Bungee Spice', sans-serif;
-    border: dotted darkcyan 2px;
-    margin-left: 50px;
-    margin-right: 50px;
-    padding: 5%;
 }
 
-.aside a:hover {
-    opacity: 0.5;
-    background-color: #007bb5;
-}
+
 
 
 /* Skills and Technical Experience */
 
-.skills {
-    grid-area: skills;
-    flex-direction: column;
-    align-items: center;
-    padding: 15px;
+.skills{
     font-family: 'Bungee Spice', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
 }
 
-
+.skills h2{
+    text-align: center;
+    justify-content: center;
+}
 
 .skillsImages img{
     flex-wrap: wrap;
     max-width: auto;
-    margin: 20px;
+    margin: 10px;
     object-fit: contain;
+    justify-self: center;
 }
 
 
-/* Technical Experience List*/
+/* Technical Experience & Certification List */
 
-.tech {
-    font-family: 'Bungee Spice', sans-serif;
+.tech, .certList {
     padding: 15px;
+}
+
+
+.tech h2, .certList h2 {
+    font-family: 'Bungee Spice', sans-serif;
     text-align: center;
 }
 
-.experienceList ul, .certList ul {
-    list-style-type: style type circle;;
-    margin: 15px;
+
+.experienceList ul, .certList ul{
     font-family: 'Scope One', sans-serif;
+    list-style-type: disc;
+    list-style-position: inside;
     text-align: center;
     font-size: 22px;
 }
 
 
-/* Projects  */
+/* Project Section */
 
 .projects{
     font-family: 'Bungee Spice', sans-serif;
-    font-size: 20px;
+    align-items: center;
     padding: 15px;
+}
+
+.projects h2{
     text-align: center;
+    justify-content: center;
 }
 
 .projects ul {
-    font-size: 15px;
-    list-style-type: style type circle;;
-    text-align: start;
     font-family: 'Scope One', sans-serif;
-} 
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: center;
+    font-size: 22px;
+}
+
 
 /* Contact */
 
 .contact form {
     text-align: center;
-    padding: 15px;
     color: black;
     font-family: 'Scope One', sans-serif;
-    font-size: 22px;
+    padding: 15px;
+    display: grid;
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/pic1.jpg);
+    min-height: 500px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    }
+
+.whitebackground {
+    background-color: whitesmoke;
+    display: inline-block;
+    justify-content: end;
+    align-items: center;
+    padding: 15px;
+    border: purple solid 1px;
 }
 
-.leave_message h1 {   
+
+.leave_message h2 {   
     text-align: center;
     justify-content: center;
     font-family: 'Bungee Spice', sans-serif;
@@ -248,12 +301,10 @@ max-height: 600px; */
 #usersName,
 #usersEmail,
 #usersMessage {
-    font-size: 25px;
+    font-size: 22px;
 } 
 
 .submit_button{
-    padding: 20px;
-    font-size: 22px;
     background-color: lightgreen;
 }
 
@@ -263,35 +314,28 @@ max-height: 600px; */
     align-items: center;
 }
 
-.submit_button p {   
-    font-size: 5px;
-} 
-
 
 /* Message Display */
 
 
 .msg{
-    font-size: 20px;
     text-align: center;
     color: black;
     font-family: 'Scope One', sans-serif;
 }
 
-.msg h1 {   
+.msg h2 {   
     text-align: center;
     justify-content: center;
     font-family: 'Bungee Spice', sans-serif;
-} 
 
+} 
 
 
 /* Footer */
 
 
 footer{
-    padding: px;
-    font-size: 22px;
     color: darkslateblue;
 } 
 
