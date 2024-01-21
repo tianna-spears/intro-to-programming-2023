@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./test.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Hedvig+Letters+Sans&display=swap" rel="stylesheet">
@@ -16,59 +15,54 @@
     <title> Portfolio, Tianna Spears</title>
 </head>
 
-<header>     
+<body>
+
+<header> 
     <nav>
-        <a href="https://github.com/tianna-spears" target="_blank" class="fa fa-github"></a> 
-        <a href="https://www.linkedin.com/in/tiannasp" target="_blank" class="fa fa-linkedin"></a>
         <ul class="navbar">
             <li><a href="#about">About</a></li>
-            <li><a href="#tech">Technical Experience</a></li>
+            <li><a href="#tech">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>  
-        </ul>
+        </ul> 
+
+        <a href="https://github.com/tianna-spears" target="_blank" class="fa fa-github"></a> 
+        <a href="https://www.linkedin.com/in/tiannasp" target="_blank" class="fa fa-linkedin"></a>
+        
     </nav>
 </header>
 
-<body>
 
+    <div class="fixed">
 
-<div class="newgrid">
+        <h1> P O R <br> T F O <br> L I O </h1>
 
-    <div class="about" id="about"> 
-       
-        <h1> Hi, I'm <br> Tianna! <br> &#8595 <br>
-            <em>Front-end Developer</em> <br>&#8595 
-        </h1>
-
-        <h2> 
-            Bringing creative ideas <br> to life. 
-        </h2>
-     
-        <p> 
-            I'm currently a Programming Student <br> at <a href="https://codethedream.org/" target="_blank">Code The Dream.</a>            
-        </p>
-
+        <div class="fixed_about">
+            <h1>Tianna <br> Spears </h1> 
+            <br> Front-End <br> Developer
+        </div>
+             
     </div>
 
 
-    <div class="aside" id="aside">
-        <img class="profilepic" src="./images/cartoon photo.png" alt="profile picture" > 
+<div class="grid">
 
-        <div class="aside_connect"> <h1>Let's Connect!</h1> </div>
-        <p><em>Tianna Spears, <br> Front-End Developer </em> </p>
 
-    <div>
-        <a href="https://github.com/tianna-spears" target="_blank" class="fa fa-github"></a> 
-        <p>GitHub</p>      
-        <a href="https://www.linkedin.com/in/tiannasp" target="_blank" class="fa fa-linkedin"></a> 
-        <p>LinkedIn</p>
-    </div>
+    <div class="about"> 
+
+        <img src="./images/cartoon photo.png" alt="profile picture"> 
+
+        <h2>Tianna Spears, <br> Front-End Developer </h2>
+         
+        <p>Bringing creative ideas to life. <br> I'm currently a Programming Student
+            <br> at <a href="https://codethedream.org/" target="_blank"> Code The Dream.</a>            
+        </p> 
 
     </div>
 
 
     <div class="skills" id="skills">
-        <h1> Skills</h1>
+        <h2> Skills</h2>
 
         <div class="skillsImages" id="skillImages"> 
             <img src="./images/005-html.png">
@@ -82,61 +76,71 @@
             <img src="./images/008-gitlab.png">
         </div>
     </div> 
+
             
             
 
     <div class="tech" id="tech">
-        <h1> Technical Experience </h1>
+        <h2> Technical Experience </h2>
 
         <div class="experienceList" id="experienceList"> 
             <ul> </ul>
         </div>
 
-        <div class="certList" id="certList">
-            <h1> Certifications </h1>
-                <ul>
-                    <li><em>Intro to Programming,</em> Treehouse <br> (Jan. 2024) - 32 hours</li>
-                    <li><em>Learn JavaScript,</em> Codecademy <br> (Oct. 2023) - 25 hours</li>
+    </div>
 
-                </ul>
-        </div>
+
+    <div class="certList" id="certList">
+        <h2> Certifications </h2>
+            <ul>
+                <li><em>Intro to Programming,</em> Treehouse <br> (Jan. 2024) - 32 hours</li>
+                <li><em>Learn JavaScript,</em> Codecademy <br> (Oct. 2023) - 25 hours</li>
+            </ul>
 
     </div>
 
 
     <div class="projects" id="projects">
-        <h1> Projects </h1>
-        <ul> </ul> 
+        <h2> Projects </h2>
+            <ul>    </ul> 
+
     </div>
 
 
-
     <div class="contact" id="contact">
+       
         <form class="leave_message" id="leave_message">
-            <h1>Leave a Message</h1>
+            
+            <div class="whitebackground">
+                <h2>Leave a Message</h2>
     
-            <label for="usersName">User's Name:</label>
-                <input type="text" id="usersName" required>
-                <br> <br>
-    
-            <label for="usersEmail">User's Email:</label>
-                <input type="email" id="usersEmail" required>
-                <br> <br>
-    
-            <label for="usersMessage">Message:</label>
-                <textarea id="usersMessage" required> </textarea>
-                <br> <br>
-    
-            <button class="submit_button"  type="submit">Submit</button> 
-                <br> 
-                <p> Please keep in mind that all submitted messages
-                will be displayed publicly. </p>
+                <label for="usersName">User's Name:</label>
+                    <input type="text" id="usersName" required>
+                    <br> <br>
+        
+                <label for="usersEmail">User's Email:</label>
+                    <input type="email" id="usersEmail" required>
+                    <br> <br>
+        
+                <label for="usersMessage">Message:</label>
+                    <textarea id="usersMessage" required> </textarea>
+                    <br> <br>
+        
+                <button class="submit_button"  type="submit">Submit</button> 
+                    <br> 
+                    <p> Submitted messages will be displayed publicly. </p>
+            </div>
         </form>
+        
     </div> 
+
+    <!-- <div class="photo2">
+
+    </div> -->
 
 
         <div class="msg" id="msg">
-            <h1>Messages</h1> 
+            <h2>Messages</h2> 
             <ul></ul>
         </div>
 
@@ -144,10 +148,13 @@
 </div>
 
 
-    <footer>  
+
+
+
+
+<footer>  
         <script src="js/index.js"> </script>
         <script src="https://kit.fontawesome.com/508c73f11a.js" crossorigin="anonymous"></script>
-        <div>
 
         <div>Icons made by 
             <a href="https://www.flaticon.com/authors/roundicons" title= "Roundicons"> Roundicons </a>,
@@ -157,7 +164,7 @@
             <a href="https://www.flaticon.com/authors/cap-cool" title= "Cap Cool"> Cap Cool </a>
         </div>
 
-    </footer>
+</footer>
 
 </body>
 
