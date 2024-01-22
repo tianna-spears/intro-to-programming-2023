@@ -367,8 +367,13 @@ footer a{
         margin: 0;
     }
 
-    .grid{
+    .grid {    
         display: block;
+    }
+
+    .about {
+        display: block;
+  
     }
 
     .navbar {
@@ -383,6 +388,7 @@ footer a{
 
     .fixed {
         background-position: left;
+        
 }
 
     .fixed_about {
