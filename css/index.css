@@ -1,9 +1,14 @@
-/* Header // Social Media Icons*/
+/* Website Styling */
 
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Header // Social Media Icons*/
 
 .fa { 
     list-style-type: none;
-    font-family: 'Scope One', serif;
     font-size: 22px;
     padding: 15px;
     margin: 15px;
@@ -38,7 +43,6 @@ nav {
 
 .navbar {
     display: flex;
-    font-family: 'Scope One', serif;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -49,7 +53,7 @@ nav {
 .navbar a{
     display: flex;
     justify-content: flex-start;
-    color: #007bb5; 
+    color: #00468B; 
     padding: 10px;
     text-decoration: none;
     font-size: 22px;
@@ -61,10 +65,6 @@ nav {
     text-decoration: underline;
 }
 
-
-/* font-family: 'Scope One', sans-serif;
-font-family: 'Bungee Spice', sans-serif; 
-*/
 
 
 /* Fixed Page Background*/
@@ -84,14 +84,12 @@ font-family: 'Bungee Spice', sans-serif;
 }
 
 .fixed h1{
-    color: black;
+    color: #00468B;
     float: left;
-    padding: 25px;
-    text-decoration: underline ;
-    background-color: whitesmoke;
+    padding: 15px;
+    background-color:whitesmoke;
     opacity: 0.5;
 }
-
 
 .fixed_about{
     color: black;
@@ -105,7 +103,7 @@ font-family: 'Bungee Spice', sans-serif;
 }
 
 
-/*  CSS Grid!- 5 total sections*/
+/*  CSS Grid!- 7 total sections*/
 
 .grid {
     display: grid;
@@ -114,38 +112,46 @@ font-family: 'Bungee Spice', sans-serif;
     grid-template-areas:
     "about about about"
     "skills skills skills"
-    "tech tech certList"
-    "projects projects projects"
+    "experience experience certList"
+    "priorexp projects projects"
     "contact contact contact"
     "msg msg msg";
     text-align: center;
 }
 
-
-/* .about, .skills, .tech, .certList, .projects,
-.contact, .msg {
-    border: purple solid 1px;
-} */
-
-.skills, .projects, .msg{
-    border: purple solid 1px;
+.skills, .experience, .certList, 
+.projects, .priorexp, .msg{
+    border: black solid 1px;
+    margin: 25px; 
+    box-shadow: 10px 10px #00468B;
 }
+
+.msg{
+    margin: 0px;
+}
+
+
+
+/* Grid Areas*/
 
 .about {
     grid-area: about;
 }
 
-
 .skills {
     grid-area: skills;
 }
 
-.tech {
-    grid-area: tech;
+.experience {
+    grid-area: experience;
 }
 
 .certList {
     grid-area: certList;
+}
+
+.priorexp{
+    grid-area: priorexp;
 }
 
 .projects {
@@ -156,14 +162,6 @@ font-family: 'Bungee Spice', sans-serif;
     grid-area: contact;
 }
 
-/* .photo1{
-    grid-area: photo1;
-}
-
-.photo2{
-    grid-area: photo2;
-} */
-
 .msg {
     grid-area: msg;
 }
@@ -172,7 +170,6 @@ font-family: 'Bungee Spice', sans-serif;
 /* About */
 
 .about{
-    font-family: 'Scope One', sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -181,68 +178,75 @@ font-family: 'Bungee Spice', sans-serif;
 }
 
 .about img {
-    border-radius: 65%;
+    border-radius: 25%;
     width: 15%;
     height: auto;
 }
 
 .about h2 {
-    font-family: 'Bungee Spice', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    color: #00468B;
+    font-weight: bolder;
 }
 
 
 
-
-/* Skills and Technical Experience */
+/* Skills  Experience */
 
 .skills{
-    font-family: 'Bungee Spice', sans-serif;
-    display: flex;
+    font-family: 'Open Sans', sans-serif;
     align-items: center;
-    justify-content: space-around;
-    padding: 15px;
-}
-
-.skills h2{
     text-align: center;
     justify-content: center;
+    text-decoration: underline;
+    padding: 5px;
+    font-weight: bolder;
+
 }
 
-.skillsImages img{
-    flex-wrap: wrap;
+
+.skills button{
+    color: #00468B;
+    font-size: 22px;
+    background-color: white;
     max-width: auto;
     margin: 10px;
-    object-fit: contain;
-    justify-self: center;
+    justify-self: start;
+    font-weight: bolder;
 }
 
 
-/* Technical Experience & Certification List */
-
-.tech, .certList {
+/* Experience Section & Cert List */
+.priorexp {
     padding: 15px;
+    font-weight: bolder;
+
 }
 
-
-.tech h2, .certList h2 {
-    font-family: 'Bungee Spice', sans-serif;
+.experience h2, .certList h2, .priorexp h2{
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
+    text-decoration: underline;
+    justify-self: center;
+    font-weight: bolder;
+
 }
 
 
-.experienceList ul, .certList ul{
-    font-family: 'Scope One', sans-serif;
+.experience ul, .certList ul, .priorexp ul{
     list-style-type: disc;
     list-style-position: inside;
     text-align: center;
-    font-size: 22px;
+    margin: 15px;
+    font-size: 20px;
+    padding: 5px;
+
 }
 
 
 /* Project Section */
 
 .projects{
-    font-family: 'Bungee Spice', sans-serif;
     align-items: center;
     padding: 15px;
 }
@@ -250,13 +254,13 @@ font-family: 'Bungee Spice', sans-serif;
 .projects h2{
     text-align: center;
     justify-content: center;
+    text-decoration: underline;  
 }
 
 .projects ul {
-    font-family: 'Scope One', sans-serif;
     list-style-type: disc;
     list-style-position: inside;
-    text-align: center;
+    text-align: start;
     font-size: 22px;
 }
 
@@ -266,7 +270,6 @@ font-family: 'Bungee Spice', sans-serif;
 .contact form {
     text-align: center;
     color: black;
-    font-family: 'Scope One', sans-serif;
     padding: 15px;
     display: grid;
     position: relative;
@@ -288,14 +291,14 @@ font-family: 'Bungee Spice', sans-serif;
     justify-content: end;
     align-items: center;
     padding: 15px;
-    border: purple solid 1px;
+    border: #00468B solid 1px;
 }
 
 
-.leave_message h2 {   
+.leave_message h2 {
+    text-decoration: underline;   
     text-align: center;
     justify-content: center;
-    font-family: 'Bungee Spice', sans-serif;
 } 
 
 #usersName,
@@ -305,11 +308,11 @@ font-family: 'Bungee Spice', sans-serif;
 } 
 
 .submit_button{
-    background-color: lightgreen;
+    background-color: #2ECBE9;
 }
 
 .submit_button:hover{
-    background-color: mediumseagreen;
+    background-color: #00468B;
     color: white;
     align-items: center;
 }
@@ -321,14 +324,12 @@ font-family: 'Bungee Spice', sans-serif;
 .msg{
     text-align: center;
     color: black;
-    font-family: 'Scope One', sans-serif;
+    padding: 15px;
 }
 
 .msg h2 {   
     text-align: center;
     justify-content: center;
-    font-family: 'Bungee Spice', sans-serif;
-
 } 
 
 
@@ -336,16 +337,50 @@ font-family: 'Bungee Spice', sans-serif;
 
 
 footer{
-    color: darkslateblue;
+    color: #00468B;;
 } 
 
 footer div{
     font-size: 10px;
 }
 
+/* Media Queries */
 
-/* @media only screen and (max-width: 600px) {
-    body {
-      font-size: 14px;
+
+@media only screen and (max-width: 425px) {
+    .fa {
+        font-size: 10px;
     }
-} */
+
+    .navbar a{
+        justify-content: left;
+        text-align: left;
+        font-size: 10px;
+        margin: 0px;
+    }
+     
+    .fixed {
+        max-height: 125px;
+        background-size: contain;
+        background-repeat: repeat;
+        }
+
+    .fixed_about {
+        display: none;
+    }
+
+    .about, .skills, .experience, .certList, 
+    .projects, .priorexp, .msg {
+        float: left;
+        width: 75%;
+        display: grid;
+        float: left;
+        padding: 0px;
+        margin: 0px;
+        text-align: start;
+        justify-content: start;
+    }
+
+    .skills {
+        float:center;
+    }
