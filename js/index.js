@@ -14,25 +14,24 @@ copyright.innerHTML = 'Copyright © ' + fullName + ' ' + thisYear; // Set the in
 
 footer.appendChild(copyright); // Using "DOM Manipulation", append the copyright element to the footer
 
-console.log(copyright); // it works!!!
+console.log(copyright); 
 
 // Lesson 4.2 Homework (Create List of Skills)
 // List your technical skills by creating an Array of String values and store it in a variable named skills
 // * changed to create an array of experiences and stored in variable named experience
 
-const experiences = ['Programming Bootcamp at Code The Dream ( Sep. 2023 - Current )',
-'Front-End Engineer Career Path at Codecademy ( Jul. 2023 - Current )'];
+const skills = ['HTML', 'CSS', 'Javascript', 'GitHub', 'Git', 'React', 'Node.js', 'GitLab', 'Visual Studio Code'];
 
-const experienceSection= document.getElementById('experienceList'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
+const skillsSection= document.getElementById('skills'); // Using "DOM Selection", select the #skills section by id and store it in a variable named skillsSection
 
-const experienceList= experienceSection.querySelector('ul'); // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
+const skillsList= skillsSection.querySelector('ul'); // Using "DOM Selection", query the skillsSection (instead of the entire document) to find the <ul> element and store it in a variable named skillsList
 
-for (let i = 0; i < experiences.length; i++) { // Create a for loop to iterate over your skills Array, starting at index 0
+for (let i = 0; i < skills.length; i++) { // Create a for loop to iterate over your skills Array, starting at index 0
 
-let experience = document.createElement('li');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
+let skill = document.createElement('button');  // Inside the loop, create a new list item (li) element and store it in a variable named skill
 
-experience.innerText = experiences[i]; // On the next line, set the inner text of your skill variable to the value of the current Array element
-experienceList.appendChild(experience); // On the next line, append the skill element to the skillsList element
+skill.innerText = skills[i]; // On the next line, set the inner text of your skill variable to the value of the current Array element
+skillsList.appendChild(skill); // On the next line, append the skill element to the skillsList element
 }
 
 // Homework 4-3 (Handle Message Form Submit and Display Messages in List)
@@ -150,9 +149,9 @@ fetch(githubRequest)
 // Display Repositories in List, Limit number of repositories shown */
 const projectSection= document.getElementById('projects');
 const projectList= projectSection.querySelector('ul');
-const limit= 11;
+const limit= 9;
 
-for (let i= 5; i < repositories.length; i++) {
+for (let i= 6; i < repositories.length; i++) {
 
   if (i >= limit) {
     break;
