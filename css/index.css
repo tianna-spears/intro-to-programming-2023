@@ -29,7 +29,7 @@
 }
 
 header{
-    position: sticky;
+    position:sticky;
     top: 0em;
     background-color: whitesmoke;
     z-index: 1000;
@@ -46,7 +46,7 @@ nav {
     list-style-type: none;
     margin: 0em;
     padding: 0em;
-    overflow: hidden;
+    overflow: visible;
     background-color: whitesmoke;
 }
     
@@ -378,11 +378,12 @@ footer a{
 
     .about {
         display: block;
-  
     }
 
     .navbar {
         background-color: transparent;
+        max-width: 512px;
+        display: block;
     }
 
     .navbar a {
