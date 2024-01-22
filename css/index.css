@@ -360,7 +360,12 @@ footer a{
 /* Media Queries */
 
 
-@media only screen and (max-width: 425px) {    
+@media screen and (max-width: 425px) {
+    .fixed {
+        background-repeat: repeat;
+        background-position: left;
+    }
+    
     nav {
         display: block; 
         text-align: center;
@@ -385,11 +390,6 @@ footer a{
         padding: 1.5em;
         text-align: center;
     }
-
-    .fixed {
-        background-position: left;
-        
-}
 
     .fixed_about {
         top: 5em;
