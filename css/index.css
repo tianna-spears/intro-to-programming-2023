@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
 }
 
 
@@ -9,9 +10,8 @@
 
 .fa { 
     list-style-type: none;
-    font-size: 22px;
-    padding: 15px;
-    margin: 15px;
+    padding: 1.375em;
+    margin: 0.938em;
 } 
 
 .fa-github { 
@@ -30,7 +30,7 @@
 
 header{
     position: sticky;
-    top: 0;
+    top: 0em;
     background-color: whitesmoke;
     z-index: 1000;
 }
@@ -44,8 +44,8 @@ nav {
 .navbar {
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0em;
+    padding: 0em;
     overflow: hidden;
     background-color: whitesmoke;
 }
@@ -54,14 +54,13 @@ nav {
     display: flex;
     justify-content: flex-start;
     color: #00468B; 
-    padding: 10px;
+    padding: 0.625em;
     text-decoration: none;
-    font-size: 22px;
 }  
     
 .navbar a:hover {
     opacity: 0.8;
-    padding: 10px;
+    padding: 0.625em;
     text-decoration: underline;
 }
 
@@ -76,7 +75,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/pic1.jpg);
-    min-height: 500px;
+    min-height: 31.25em;
     text-align: center;
     align-items: center;
     justify-items: center;
@@ -86,7 +85,7 @@ nav {
 .fixed h1{
     color: #00468B;
     float: left;
-    padding: 15px;
+    padding: 0.938em;
     background-color:whitesmoke;
     opacity: 0.5;
 }
@@ -94,12 +93,12 @@ nav {
 .fixed_about{
     color: black;
     position: absolute;
-    top: 100px;
-    right: 15px;
-    padding: 10px;
+    top: 6.25em;
+    right: 0.938em;
+    padding: 0.625em;
     text-transform: uppercase;
     background-color: whitesmoke;
-    letter-spacing: 3px;
+    letter-spacing: 0.188em;
 }
 
 
@@ -107,6 +106,7 @@ nav {
 
 .grid {
     display: grid;
+    font-size: 16px;
     grid-template-rows: auto;
     grid-template-columns: auto;
     grid-template-areas:
@@ -119,15 +119,17 @@ nav {
     text-align: center;
 }
 
-.skills, .experience, .certList, 
+ .experience, .certList, 
 .projects, .priorexp, .msg{
-    border: black solid 1px;
-    margin: 25px; 
-    box-shadow: 10px 10px #00468B;
+    border: #00468B solid 1px;
+    margin: 0.938em; 
+    padding: 0.625em;
+    box-shadow: 0.625em 0.625em #00468B;
+    font-size: 1em;
 }
 
 .msg{
-    margin: 0px;
+    margin: 0.938em; 
 }
 
 
@@ -173,9 +175,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 15px;
-    font-size: 22px;
-}
+    padding: 0.625em;
+} 
 
 .about img {
     border-radius: 25%;
@@ -187,6 +188,14 @@ nav {
     font-family: 'Open Sans', sans-serif;
     color: #00468B;
     font-weight: bolder;
+    font-size: 1.875em;
+}
+
+.about p {
+    font-size: 1.125em;
+    border: 1px solid #00468B;
+    background-color: whitesmoke;
+    padding: 0.313em;
 }
 
 
@@ -199,18 +208,18 @@ nav {
     text-align: center;
     justify-content: center;
     text-decoration: underline;
-    padding: 5px;
+    padding: 0.313em;
     font-weight: bolder;
-
+    border: 1px solid #00468B;
 }
 
 
 .skills button{
     color: #00468B;
-    font-size: 22px;
-    background-color: white;
+    font-size: 1.25em;
+    background-color: whitesmoke;
     max-width: auto;
-    margin: 10px;
+    margin: 0.625em;
     justify-self: start;
     font-weight: bolder;
 }
@@ -218,7 +227,7 @@ nav {
 
 /* Experience Section & Cert List */
 .priorexp {
-    padding: 15px;
+    padding: 0.938em;
     font-weight: bolder;
 
 }
@@ -237,9 +246,9 @@ nav {
     list-style-type: disc;
     list-style-position: inside;
     text-align: center;
-    margin: 15px;
-    font-size: 20px;
-    padding: 5px;
+    margin: 0.938em;
+    font-size: 1.25em;
+    padding: 0.313em;
 
 }
 
@@ -248,7 +257,7 @@ nav {
 
 .projects{
     align-items: center;
-    padding: 15px;
+    padding: 0.938em;
 }
 
 .projects h2{
@@ -261,7 +270,7 @@ nav {
     list-style-type: disc;
     list-style-position: inside;
     text-align: start;
-    font-size: 22px;
+    font-size: 1.375em;
 }
 
 
@@ -270,7 +279,7 @@ nav {
 .contact form {
     text-align: center;
     color: black;
-    padding: 15px;
+    padding: 0.938em;
     display: grid;
     position: relative;
     background-attachment: fixed;
@@ -278,7 +287,7 @@ nav {
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(../images/pic1.jpg);
-    min-height: 500px;
+    min-height: 31.25em;
     text-align: center;
     align-items: center;
     justify-items: center;
@@ -290,7 +299,7 @@ nav {
     display: inline-block;
     justify-content: end;
     align-items: center;
-    padding: 15px;
+    padding: 0.938em;
     border: #00468B solid 1px;
 }
 
@@ -304,7 +313,7 @@ nav {
 #usersName,
 #usersEmail,
 #usersMessage {
-    font-size: 22px;
+    font-size: 1.375em;
 } 
 
 .submit_button{
@@ -324,7 +333,7 @@ nav {
 .msg{
     text-align: center;
     color: black;
-    padding: 15px;
+    padding: 0.938em;
 }
 
 .msg h2 {   
@@ -341,46 +350,64 @@ footer{
 } 
 
 footer div{
-    font-size: 10px;
+    font-size: 0.625em;
+}
+
+footer a{
+    font-size: 1em;
 }
 
 /* Media Queries */
 
 
-@media only screen and (max-width: 425px) {
-    .fa {
-        font-size: 10px;
+@media only screen and (max-width: 425px) {    
+    nav {
+        display: block; 
+        text-align: center;
+        margin: 0;
     }
 
-    .navbar a{
-        justify-content: left;
-        text-align: left;
-        font-size: 10px;
-        margin: 0px;
+    .grid{
+        display: block;
     }
-     
+
+    .navbar {
+        background-color: transparent;
+    }
+
+    .navbar a {
+        display: block;
+        padding: 1.5em;
+        text-align: center;
+    }
+
     .fixed {
-        max-height: 125px;
-        background-size: contain;
-        background-repeat: repeat;
-        }
+        background-position: left;
+}
 
     .fixed_about {
-        display: none;
+        top: 5em;
+        right: 2em;
+        font-size: 0.8em;
     }
 
-    .about, .skills, .experience, .certList, 
-    .projects, .priorexp, .msg {
-        float: left;
-        width: 75%;
-        display: grid;
-        float: left;
-        padding: 0px;
+    .skills,
+    .experience h2,
+    .certList h2,
+    .priorexp h2,
+    .projects h2,
+    .contact form,
+    .leave_message h2,
+    #usersName,
+    #usersEmail,
+    #usersMessage,
+    .msg h2,
+    footer div,
+    footer a {
+        font-size: 1em;
         margin: 0px;
-        text-align: start;
-        justify-content: start;
+        padding: 0;
+        align-items: start;
     }
 
-    .skills {
-        float:center;
-    }
+}
