@@ -208,8 +208,9 @@ nav {
     text-align: center;
     justify-content: center;
     text-decoration: underline;
-    padding: 0.313em;
+    padding: 0.25em;
     font-weight: bolder;
+    margin: 0.95em;
     border: 1px solid #00468B;
 }
 
@@ -219,7 +220,7 @@ nav {
     font-size: 1.25em;
     background-color: whitesmoke;
     max-width: auto;
-    margin: 0.625em;
+    margin: 0.25em;
     justify-self: start;
     font-weight: bolder;
 }
@@ -360,10 +361,11 @@ footer a{
 /* Media Queries */
 
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 512px) {
     .fixed {
         background-repeat: repeat;
-        background-position: left;
+        background-size: fill;
+        background-size: contain;
     }
     
     nav {
@@ -382,7 +384,6 @@ footer a{
 
     .navbar {
         background-color: transparent;
-        max-width: 512px;
         display: block;
     }
 
